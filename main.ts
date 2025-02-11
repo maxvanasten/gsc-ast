@@ -1,4 +1,6 @@
 import fs from "fs";
+import Tokenizer from "./tokenizer";
+
 const input_files = fs.readdirSync(`./input`);
 
 console.log(`[gsc-ast] Attempting to parse input files...`);
@@ -11,7 +13,14 @@ input_files.forEach((input_file) => {
 
     console.log(`\t${name}[Tokenizer]`)
     // Tokenize content
+    const tokenizer = new Tokenizer(content);
+    const tokens = tokenizer.tokenize();
 
+    let tokens_log_string = "";
+    tokens.forEach((token) => {
+        tokens_log_string += `${token.identifier}\n\t\t\t`
+    })
+    console.log(`\t\tTokens: \n\t\t\t${tokens_log_string}`);
 
     console.log(`\t${name}[Parser]`)
     // Parse tokens
