@@ -1,5 +1,7 @@
 export type Token = {
-    identifier: "string" | "identifier" | "#include" | ";" | "(" | ")" | "{" | "}" | "[" | "]" | "=" | "-" | "+" | "*" | "/" | "!";
+    // identifier: "string" | "identifier" | "#include" | ";" | "(" | ")" | "{" | "}" | "[" | "]" | "=" | "-" | "+" | "*" | "/" | "!";
+    identifier: string;
+    content?: string;
 }
 
 export default class Tokenizer {
@@ -32,16 +34,21 @@ export default class Tokenizer {
                 case "*":
                 case "/":
                 case "!":
-                    this.tokens.push({
-                        identifier: this.current_char
-                    })
+                    this.add_identifier();
+                    this.add_token(this.current_char);
                     break;
                 case "#":
                     const result = this.get_match("#include");
                     if (!result) break;
-                    this.tokens.push({
-                        identifier: "#include"
-                    })
+                    this.add_identifier();
+                    this.add_token("#include");
+                    break;
+                case "\n":
+                case "\t":
+                case "\r":
+                    break;
+                default:
+                    this.buffer += this.current_char;
             }
     
             this.index++;
@@ -51,17 +58,44 @@ export default class Tokenizer {
         return this.tokens;
     }
 
+    add_token(identifier: string, content?: string) {
+        this.tokens.push({
+            identifier: identifier,
+            content: content || ""
+        })
+    }
+
+    add_identifier() {
+        if (!this.buffer.length) return;
+
+        this.tokens.push({
+            identifier: "identifier",
+            content: this.buffer
+        })
+        this.buffer = "";
+    }
+
     get_match(target: string): boolean {
         let search_buffer = "";
         let search_index = this.index;
+        let checks = 0;
         
-        while(search_index <= this.input.length && search_index < target.length) {
+        // console.log(`Search index: ${search_index}, Input length: ${this.input.length}, Target length: ${target.length}`)
+
+        while (search_index <= this.input.length && checks < target.length) {
+            checks++;
             search_buffer += this.input[search_index];
             search_index++;
             // console.log(`search_buffer: ${search_buffer} (target: ${target}) [${search_buffer == target}]`);
         }
 
-        if (search_buffer == target) return true;
-        return false;
+        if (search_buffer == target) {
+            this.index = search_index;
+            this.current_char = this.input[this.index];
+
+            return true;
+        } else {
+            return false;
+        }
     }
 }
