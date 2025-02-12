@@ -37,12 +37,19 @@ export default class Tokenizer {
                     this.add_identifier();
                     this.add_token(this.current_char);
                     break;
-                case "#":
-                    const result = this.get_match("#include");
+                case "'":
+                case '"':
+                case "`":
+                    this.add_identifier();
+                    this.add_token(this.current_char);
+                    break;
+                case "#": {
+                    let result = this.get_match("#include");
                     if (!result) break;
                     this.add_identifier();
                     this.add_token("#include");
                     break;
+                }
                 case "\n":
                 case "\t":
                 case "\r":
