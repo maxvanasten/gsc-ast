@@ -4,6 +4,9 @@ import Tokenizer from "./tokenizer";
 
 const input_files = fs.readdirSync(`./input`);
 
+if (fs.existsSync("./output")) fs.rmSync("./output", { recursive: true, force: true });
+fs.mkdirSync("./output");
+
 console.log(`[gsc-ast] Attempting to parse input files...`);
 input_files.forEach((input_file) => {
     const name = input_file.split(".gsc")[0];
