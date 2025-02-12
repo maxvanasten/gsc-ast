@@ -39,7 +39,7 @@ export default class Tokenizer {
                     break;
                 case "'":
                 case '"':
-                case "`":
+                    // case "`":
                     this.add_identifier();
                     this.add_token(this.current_char);
                     break;
