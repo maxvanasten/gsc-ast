@@ -3,7 +3,7 @@
 ## About
 
 This is a project to turn GSC scripts (from Plutonium T6 specifically) into an Abstract Syntax Tree.
-GSC-AST is far from functional, currently its just a proof of concept.
+GSC-AST is far from functional, currently its just a proof of concept. The end goal of GSC-AST is to parse all of the dumped T6 scripts into an AST for use in a language server.
 
 ## Demo
 
