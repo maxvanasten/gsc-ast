@@ -6,7 +6,7 @@ export type Token = {
 
 export default class Tokenizer {
     input: string;
-    
+
     index: number = 0;
     current_char: string = "";
     buffer: string = "";
@@ -57,7 +57,7 @@ export default class Tokenizer {
                 default:
                     this.buffer += this.current_char;
             }
-    
+
             this.index++;
             this.current_char = this.input[this.index];
         }
@@ -86,7 +86,7 @@ export default class Tokenizer {
         let search_buffer = "";
         let search_index = this.index;
         let checks = 0;
-        
+
         // console.log(`Search index: ${search_index}, Input length: ${this.input.length}, Target length: ${target.length}`)
 
         while (search_index <= this.input.length && checks < target.length) {

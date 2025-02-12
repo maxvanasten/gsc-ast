@@ -12,6 +12,7 @@ input_files.forEach((input_file) => {
     const name = input_file.split(".gsc")[0];
     const input_path = `./input/${input_file}`;
     const output_path = `./output/${name}`;
+
     if (!fs.existsSync(output_path)) {
         fs.mkdirSync(output_path);
     } else {
