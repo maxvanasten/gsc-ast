@@ -1,4 +1,5 @@
 import fs from "fs";
+import Parser from "./parser";
 import Tokenizer from "./tokenizer";
 
 const input_files = fs.readdirSync(`./input`);
@@ -35,9 +36,29 @@ input_files.forEach((input_file) => {
     console.log(`\t\tWriting tokens to ${output_path}/tokens.json`);
     fs.writeFileSync(`${output_path}/tokens.json`, JSON.stringify(tokens));
 
-    console.log(`\t${name}[Parser]`)
+    console.log(`\n\n\n\n\n\t${name}[Parser]`)
     // Parse tokens
-    
-    console.log(`\t${name}[Main]:`)
+    const parser = new Parser(tokens);
+    const ast = parser.parse();
 
+    let ast_log_string = "";
+    ast.forEach((item) => {
+        switch (item.identifier) {
+            case "include_statement":
+            case "string":
+                ast_log_string += `${item.identifier} "${item.content}"\n\t\t\t`;
+                break;
+            case "variable_assignment":
+                if (!item.children) break;
+                ast_log_string += `${item.identifier} (${item.children[0].content} = ${item.content})\n\t\t\t`;
+                break;
+            default:
+                ast_log_string += `${item.identifier}\n\t\t\t`;
+        }
+
+    })
+    console.log(`\t\tASTItems: \n\t\t\t${ast_log_string}`);
+
+    console.log(`\t\tWriting AST to ${output_path}/ast.json`);
+    fs.writeFileSync(`${output_path}/ast.json`, JSON.stringify(ast));
 })
