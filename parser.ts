@@ -1,9 +1,10 @@
 import { Token } from "./tokenizer";
 
 export type ASTItem = {
-    identifier: string;
+    type: string;
     content?: string;
     children?: ASTItem[];
+    file_path?: string;
 }
 
 export type MatchResult = {
@@ -31,8 +32,8 @@ export default class Parser {
                     result = this.get_match(["#include", "identifier", ";"]);
                     if (!result.valid) break;
                     this.ast.push({
-                        identifier: "include_statement",
-                        content: result.tokens[1].content
+                        type: "include_statement",
+                        file_path: result.tokens[1].content
                     })
                     break;
                 case "'":
@@ -52,7 +53,7 @@ export default class Parser {
                     })
 
                     this.ast.push({
-                        identifier: "string",
+                        type: "string",
                         content: string
                     })
                     break;
@@ -65,7 +66,7 @@ export default class Parser {
                     // Store variable name
                     let children: ASTItem[] = [];
                     children.push({
-                        identifier: "variable_name",
+                        type: "variable_name",
                         content: this.input[this.index-1].content?.replaceAll(" ", "")
                     })
 
@@ -76,7 +77,7 @@ export default class Parser {
                     // Add tokens to children
                     result.tokens.forEach((token) => {
                         children.push({
-                            identifier: "assignment",
+                            type: "assignment",
                             content: token.content || token.identifier
                         })
                     })
@@ -95,7 +96,7 @@ export default class Parser {
                         }
                     })
                     this.ast.push({
-                        identifier: "variable_assignment",
+                        type: "variable_assignment",
                         content: string,
                         children: children
                     })

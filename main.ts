@@ -47,17 +47,17 @@ input_files.forEach((input_file) => {
 
     let ast_log_string = "";
     ast.forEach((item) => {
-        switch (item.identifier) {
+        switch (item.type) {
             case "include_statement":
             case "string":
-                ast_log_string += `${item.identifier} "${item.content}"\n\t\t\t`;
+                ast_log_string += `${item.type} "${item.content}"\n\t\t\t`;
                 break;
             case "variable_assignment":
                 if (!item.children) break;
-                ast_log_string += `${item.identifier} (${item.children[0].content} = ${item.content})\n\t\t\t`;
+                ast_log_string += `${item.type} (${item.children[0].content} = ${item.content})\n\t\t\t`;
                 break;
             default:
-                ast_log_string += `${item.identifier}\n\t\t\t`;
+                ast_log_string += `${item.type}\n\t\t\t`;
         }
 
     })
