@@ -24,27 +24,27 @@ and correctly parse it into the following AST:
 ```json
 [
     {
-        "identifier": "include_statement",
-        "content": "common_scripts\\utility"
+        "type": "include_statement",
+        "file_path": "common_scripts\\utility"
     },
     {
-        "identifier": "include_statement",
-        "content": "maps\\mp\\gametypes_zm\\_hud_util"
+        "type": "include_statement",
+        "file_path": "maps\\mp\\gametypes_zm\\_hud_util"
     },
     {
-        "identifier": "include_statement",
-        "content": "maps\\mp\\zombies\\_zm_utility"
+        "type": "include_statement",
+        "file_path": "maps\\mp\\zombies\\_zm_utility"
     },
     {
-        "identifier": "include_statement",
-        "content": "some_script"
+        "type": "include_statement",
+        "file_path": "some_script"
     },
     {
-        "identifier": "string",
+        "type": "string",
         "content": "test_st'ring_1"
     },
     {
-        "identifier": "string",
+        "type": "string",
         "content": "test_s{}$$%$tring_2"
     }
 ]
