@@ -1,6 +1,7 @@
 import fs from "fs";
-import Parser from "./parser";
 import Tokenizer from "./tokenizer";
+
+import parse_tokens from "./helpers/parse_tokens";
 
 const input_files = fs.readdirSync(`./input`);
 
@@ -42,8 +43,7 @@ input_files.forEach((input_file) => {
 
     console.log(`\n\n\n\n\n\t${name}[Parser]`)
     // Parse tokens
-    const parser = new Parser(tokens);
-    const ast = parser.parse();
+    const ast = parse_tokens(tokens);
 
     let ast_log_string = "";
     ast.forEach((item) => {
