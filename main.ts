@@ -5,8 +5,7 @@ import parse_tokens from "./helpers/parse_tokens";
 
 const input_files = fs.readdirSync(`./input`);
 
-if (fs.existsSync("./output")) fs.rmSync("./output", { recursive: true, force: true });
-fs.mkdirSync("./output");
+if (!fs.existsSync("./output")) fs.mkdirSync("./output");
 
 console.log(`[gsc-ast] Attempting to parse input files...`);
 input_files.forEach((input_file) => {

@@ -6,7 +6,8 @@
 
   "main": "main.ts",
   "scripts": {
-    "start": "npx tsx main.ts",
+    "clean-output-folder": "rm -rf ./output",
+    "start": "npm run clean-output-folder && npx tsx main.ts",
     "watch": "npx tsx --watch main.ts"
   },
   "keywords": [],
