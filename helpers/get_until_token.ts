@@ -20,5 +20,8 @@ export default function get_until_token(input_tokens: Token[], target_token_iden
     }
 
     result.index++;
+
+    console.log(`[get_until_token] index: ${result.index}, tokens_length: ${result.tokens.length}`);
+
     return result;
 }
