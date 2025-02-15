@@ -44,9 +44,13 @@ input_files.forEach((input_file) => {
     // Parse tokens
     const ast = parse_tokens(tokens);
 
+
     let ast_log_string = "";
     ast.forEach((item) => {
         switch (item.type) {
+            case "newline":
+                ast.splice(ast.indexOf(item), 1);
+                break;
             case "include_statement":
             case "string":
             case "variable_reference":
