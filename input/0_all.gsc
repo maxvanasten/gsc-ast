@@ -3,5 +3,6 @@
 #include maps\mp\zombies\_zm_utility;
 #include some_script;
 
-"test_st'ring_1";
-'test_s{}#$#$%$tring_2';
+player_name = "HasjBlok";
+player_age = 22;
+message = "Hello, " + player_name +". You are " + player_age + " years old.";
