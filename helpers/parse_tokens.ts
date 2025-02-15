@@ -61,8 +61,11 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
 
 
                 // Check if previous token is identifier
-                if (index <= 0) break;
                 console.log(`parse_tokens: previous token: ${tokens[index - 1].identifier}, (${tokens[index - 1].content})`)
+                if (index <= 0) {
+                    index++;
+                    break;
+                }
 
                 if (tokens[index - 1].identifier == "identifier" || tokens[index - 1].identifier == "variable_reference") {
                     const variable_name: string = tokens[index - 1].content?.replaceAll(" ", "") || "undefined"
