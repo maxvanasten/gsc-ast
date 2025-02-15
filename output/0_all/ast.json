@@ -20,68 +20,169 @@
     "file_path": "some_script"
   },
   {
-    "type": "comment",
-    "content": "Set some variables"
-  },
-  {
-    "type": "variable_assignment",
-    "content": "player_name",
+    "type": "function_declaration",
+    "content": "init",
     "children": [
       {
-        "type": "string",
-        "content": "Max"
-      }
-    ]
-  },
-  {
-    "type": "variable_assignment",
-    "content": "player_age",
-    "children": [
-      {
-        "type": "number",
-        "content": "22"
-      }
-    ]
-  },
-  {
-    "type": "variable_assignment",
-    "content": "message",
-    "children": [
-      {
-        "type": "string",
-        "content": "Hello, "
+        "type": "comment",
+        "content": "Set some variables"
       },
       {
-        "type": "math_operator",
-        "content": "+"
+        "type": "variable_assignment",
+        "content": "player_name",
+        "children": [
+          {
+            "type": "string",
+            "content": "Max"
+          }
+        ]
       },
+      {
+        "type": "variable_assignment",
+        "content": "player_age",
+        "children": [
+          {
+            "type": "number",
+            "content": "22"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "content": "Combine variables into one"
+      },
+      {
+        "type": "variable_assignment",
+        "content": "message",
+        "children": [
+          {
+            "type": "string",
+            "content": "Hello, "
+          },
+          {
+            "type": "math_operator",
+            "content": "+"
+          },
+          {
+            "type": "variable_reference",
+            "content": "player_name"
+          },
+          {
+            "type": "math_operator",
+            "content": "+"
+          },
+          {
+            "type": "string",
+            "content": ". You are "
+          },
+          {
+            "type": "math_operator",
+            "content": "+"
+          },
+          {
+            "type": "variable_reference",
+            "content": "player_age"
+          },
+          {
+            "type": "math_operator",
+            "content": "+"
+          },
+          {
+            "type": "string",
+            "content": " years old."
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "content": "Output message"
+      },
+      {
+        "type": "function_call",
+        "content": "print",
+        "children": [
+          {
+            "type": "string",
+            "content": "Message: "
+          },
+          {
+            "type": "math_operator",
+            "content": "+"
+          },
+          {
+            "type": "variable_reference",
+            "content": "message"
+          }
+        ]
+      }
+    ],
+    "arguments": []
+  },
+  {
+    "type": "function_declaration",
+    "content": "greet_player",
+    "children": [
+      {
+        "type": "variable_assignment",
+        "content": "welcome_message",
+        "children": [
+          {
+            "type": "string",
+            "content": "Welcome, "
+          },
+          {
+            "type": "math_operator",
+            "content": "+"
+          },
+          {
+            "type": "variable_reference",
+            "content": "player_name"
+          },
+          {
+            "type": "math_operator",
+            "content": "+"
+          },
+          {
+            "type": "string",
+            "content": ". You are "
+          },
+          {
+            "type": "math_operator",
+            "content": "+"
+          },
+          {
+            "type": "variable_reference",
+            "content": "player_age"
+          },
+          {
+            "type": "math_operator",
+            "content": "+"
+          },
+          {
+            "type": "string",
+            "content": " years old."
+          }
+        ]
+      },
+      {
+        "type": "function_call",
+        "content": "print",
+        "children": [
+          {
+            "type": "variable_reference",
+            "content": "welcome_message"
+          }
+        ]
+      }
+    ],
+    "arguments": [
       {
         "type": "variable_reference",
         "content": "player_name"
       },
       {
-        "type": "math_operator",
-        "content": "+"
-      },
-      {
-        "type": "string",
-        "content": ". You are "
-      },
-      {
-        "type": "math_operator",
-        "content": "+"
-      },
-      {
         "type": "variable_reference",
         "content": "player_age"
-      },
-      {
-        "type": "math_operator",
-        "content": "+"
-      },
-      {
-        "type": "string",
-        "content": " years old."
       }
     ]
   }

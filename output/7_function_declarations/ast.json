@@ -12,10 +12,57 @@
             "content": "Hello, world!"
           }
         ]
+      }
+    ],
+    "arguments": []
+  },
+  {
+    "type": "function_declaration",
+    "content": "function_with_args",
+    "children": [
+      {
+        "type": "function_call",
+        "content": "print",
+        "children": [
+          {
+            "type": "string",
+            "content": "Arg1: "
+          },
+          {
+            "type": "math_operator",
+            "content": "+"
+          },
+          {
+            "type": "variable_reference",
+            "content": "arg1"
+          },
+          {
+            "type": "math_operator",
+            "content": "+"
+          },
+          {
+            "type": "string",
+            "content": ", Arg2: "
+          },
+          {
+            "type": "math_operator",
+            "content": "+"
+          },
+          {
+            "type": "variable_reference",
+            "content": "arg2"
+          }
+        ]
+      }
+    ],
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "arg1"
       },
       {
-        "type": "newline",
-        "content": ""
+        "type": "variable_reference",
+        "content": "arg2"
       }
     ]
   }
