@@ -235,24 +235,24 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                 index++;
                 break;
             }
-            case "newline": {
-                output.push({
-                    type: "newline",
-                    content: ""
-                })
-                index++;
-                break;
-            }
+            // case "newline": {
+            //     output.push({
+            //         type: "newline",
+            //         content: ""
+            //     })
+            //     index++;
+            //     break;
+            // }
             default:
                 output.push({
                     type: "unhandled_token",
                     content: tokens[index].identifier,
-                    children: [
-                        {
-                            type: "content",
-                            content: tokens[index].content || ""
-                        }
-                    ]
+                    // children: [
+                    //     {
+                    //         type: "content",
+                    //         content: tokens[index].content || ""
+                    //     }
+                    // ]
                 })
                 index++
         }
