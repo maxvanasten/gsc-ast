@@ -16,6 +16,10 @@ and correctly parse it into the following AST:
 ```json
 [
     {
+        "type": "comment",
+        "content": "Include external scripts"
+    },
+    {
         "type": "include_statement",
         "file_path": "common_scripts\\utility"
     },
@@ -30,6 +34,10 @@ and correctly parse it into the following AST:
     {
         "type": "include_statement",
         "file_path": "some_script"
+    },
+    {
+        "type": "comment",
+        "content": "Set some variables"
     },
     {
         "type": "variable_assignment",
