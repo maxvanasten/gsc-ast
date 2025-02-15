@@ -3,6 +3,8 @@ import Tokenizer from "./tokenizer";
 
 import parse_tokens, { ASTItem } from "./helpers/parse_tokens";
 
+import analyze_ast from "./helpers/analyze_ast";
+
 const input_files = fs.readdirSync(`./input`);
 
 if (!fs.existsSync("./output")) fs.mkdirSync("./output");
@@ -96,4 +98,6 @@ input_files.forEach((input_file) => {
 
     console.log(`\t\tWriting AST to ${output_path}/ast.json`);
     fs.writeFileSync(`${output_path}/ast.json`, JSON.stringify(ast, null, 2));
+
+    fs.writeFileSync(`${output_path}/output.md`, analyze_ast(ast));
 })
