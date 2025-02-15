@@ -9,15 +9,7 @@ GSC-AST is far from functional, currently its just a proof of concept. The end g
 
 GSC-AST can currently take a .gsc file with the following contents:
 
-```c
-#include common_scripts\utility;
-#include maps\mp\gametypes_zm\_hud_util;
-#include maps\mp\zombies\_zm_utility;
-#include some_script;
-
-"test_st'ring_1";
-'test_s{}#$#$%$tring_2';
-```
+![some gsc showcasing the current working file](./demo_images/input_0_all.png)
 
 and correctly parse it into the following AST:
 
@@ -40,12 +32,76 @@ and correctly parse it into the following AST:
         "file_path": "some_script"
     },
     {
-        "type": "string",
-        "content": "test_st'ring_1"
+        "type": "variable_assignment",
+        "content": "player_name",
+        "children": [
+            {
+                "type": "string",
+                "content": "HasjBlok"
+            }
+        ]
     },
     {
-        "type": "string",
-        "content": "test_s{}$$%$tring_2"
+        "type": "variable_assignment",
+        "content": "player_age",
+        "children": [
+            {
+                "type": "number",
+                "content": "22"
+            }
+        ]
+    },
+    {
+        "type": "variable_assignment",
+        "content": "message",
+        "children": [
+            {
+                "type": "string",
+                "content": "Hello, "
+            },
+            {
+                "type": "math_operator",
+                "content": "+"
+            },
+            {
+                "type": "variable_reference",
+                "content": "player_name"
+            },
+            {
+                "type": "math_operator",
+                "content": "+"
+            },
+            {
+                "type": "string",
+                "content": ". You are "
+            },
+            {
+                "type": "math_operator",
+                "content": "+"
+            },
+            {
+                "type": "variable_reference",
+                "content": "player_age"
+            },
+            {
+                "type": "math_operator",
+                "content": "+"
+            },
+            {
+                "type": "string",
+                "content": " years old."
+            }
+        ]
     }
 ]
 ```
+
+## Current coverage
+
+- Numbers (number)
+- Strings (string)
+- Math operators (math_operator)
+- Include statements (include_statement)
+- Variable reference (variable_reference)
+- Variable assignment (variable_assignment)
+- Unhandled (unhandled_token)
