@@ -1,7 +1,7 @@
 export type Token = {
     // identifier: "string" | "identifier" | "#include" | ";" | "(" | ")" | "{" | "}" | "[" | "]" | "=" | "-" | "+" | "*" | "/" | "!";
     identifier: string;
-    content?: string;
+    content: string;
 }
 
 export default class Tokenizer {
@@ -34,12 +34,8 @@ export default class Tokenizer {
                 case "*":
                 case "/":
                 case "!":
-                    this.add_identifier();
-                    this.add_token(this.current_char);
-                    break;
                 case "'":
                 case '"':
-                    // case "`":
                     this.add_identifier();
                     this.add_token(this.current_char);
                     break;
@@ -73,7 +69,11 @@ export default class Tokenizer {
     }
 
     add_identifier() {
-        if (!this.buffer.length) return;
+        // console.log(`add_identifier buffer: ${this.buffer}`)
+        if (!this.buffer.length || this.buffer == " ") {
+            this.buffer = "";
+            return;
+        }
 
         this.tokens.push({
             identifier: "identifier",
