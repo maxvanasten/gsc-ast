@@ -189,10 +189,12 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                     })
                 } else {
                     // Number
-                    output.push({
-                        type: "number",
-                        content: tokens[index].content.replaceAll(" ", "")
-                    })
+                    if (tokens[index].content.length && tokens[index].content != " ") {
+                        output.push({
+                            type: "number",
+                            content: tokens[index].content.replaceAll(" ", "")
+                        })
+                    }
                 }
                 index++;
                 break;

@@ -35,6 +35,7 @@ export default class Tokenizer {
                 case "/":
                 case ">":
                 case "<":
+                case ",":
                 case "!":
                 case "'":
                 case '"':
@@ -75,7 +76,7 @@ export default class Tokenizer {
 
     add_identifier() {
         // console.log(`add_identifier buffer: ${this.buffer}`)
-        if (!this.buffer.length || this.buffer == " ") {
+        if (!this.buffer.length) {
             this.buffer = "";
             return;
         }
