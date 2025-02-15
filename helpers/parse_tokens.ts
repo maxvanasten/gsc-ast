@@ -90,6 +90,43 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
 
                 break;
             }
+            case "(": {
+                if (index <= 0) {
+                    index++;
+                    break;
+                }
+
+                if (tokens[index - 1].identifier == "identifier") {
+                    const function_name: string = tokens[index - 1].content;
+                    // Get tokens until )
+                    const result = get_until_token(tokens, ")", index);
+                    if (!result.valid) break;
+                    index = result.index;
+
+                    // Check to delete potential previously added variable_reference
+                    if (output.length > 0) {
+                        if (output[output.length - 1].type == "variable_reference") {
+                            output.splice(output.length - 1, 1);
+                        }
+                    }
+
+                    let func_ast = parse_tokens(result.tokens);
+                    func_ast.forEach((item) => {
+                        if (item.type == "unhandled_token" && item.content == ",") {
+                            func_ast.splice(func_ast.indexOf(item), 1);
+                        }
+                    })
+                    output.push({
+                        type: "function_call",
+                        content: function_name,
+                        children: func_ast
+                    })
+                } else {
+                    index++;
+                }
+
+                break;
+            }
             case "+":
             case "-":
             case ">":
@@ -122,6 +159,27 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                 index++;
                 break;
             }
+            // case ",":
+            //     output.push({
+            //         type: "comma_separator",
+            //         content: ""
+            //     })
+            //     index++;
+            //     break;
+            // case "(":
+            //     output.push({
+            //         type: "l_paren",
+            //         content: ""
+            //     })
+            //     index++;
+            //     break;
+            // case ")":
+            //     output.push({
+            //         type: "r_paren",
+            //         content: ""
+            //     })
+            //     index++;
+            //     break;
             case "identifier": {
                 if (isNaN(+tokens[index].content)) {
                     // Variable reference
