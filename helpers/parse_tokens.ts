@@ -59,10 +59,7 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                 break;
             }
             case "=": {
-                // Check if previous item in ast is variable_reference
-                if (output[output.length-1].type == "variable_reference") {
-                    output.splice(output.length-1, 1);
-                }
+
 
                 // Check if previous token is identifier
                 if (index <= 0) break;
@@ -75,6 +72,13 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                     let result = get_until_token(tokens, ";", index);
                     if (!result.valid) break;
                     index = result.index;
+
+                    // Check if previous item in ast is variable_reference
+                    if (output.length > 0) {
+                        if (output[output.length - 1].type == "variable_reference") {
+                            output.splice(output.length - 1, 1);
+                        }
+                    }
 
                     output.push({
                         type: "variable_assignment",
@@ -93,6 +97,25 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
             case "-":
             case "/":
             case "*": {
+                if (tokens[index].identifier == "/") {
+                    // Check if not a comment
+                    if (index + 1 < tokens.length) {
+                        if (tokens[index + 1].identifier == "/") {
+                            // Comment until newline
+                            let result = get_until_token(tokens, "newline", index);
+                            if (result.valid) {
+                                index = result.index;
+
+                                output.push({
+                                    type: "comment",
+                                    content: result.tokens[1].content
+                                })
+                                break;
+                            }
+                        }
+                    }
+                }
+
                 output.push({
                     type: "math_operator",
                     content: tokens[index].identifier
@@ -114,6 +137,14 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                         content: tokens[index].content.replaceAll(" ", "")
                     })
                 }
+                index++;
+                break;
+            }
+            case "newline": {
+                output.push({
+                    type: "newline",
+                    content: ""
+                })
                 index++;
                 break;
             }

@@ -47,6 +47,9 @@ export default class Tokenizer {
                     break;
                 }
                 case "\n":
+                    this.add_identifier();
+                    this.add_token("newline")
+                    break;
                 case "\t":
                 case "\r":
                     break;

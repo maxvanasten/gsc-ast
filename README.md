@@ -104,4 +104,5 @@ and correctly parse it into the following AST:
 - Include statements (include_statement)
 - Variable reference (variable_reference)
 - Variable assignment (variable_assignment)
+- Comment (comment)
 - Unhandled (unhandled_token)
