@@ -13,8 +13,6 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
     let index: number = 0;
     let output: ASTItem[] = [];
 
-    let delete_list: ASTItem[] = [];
-
     while (index < tokens.length) {
         console.log(`[${index} / ${tokens.length}] token: ${tokens[index].identifier}, (${tokens[index].content})`);
         switch (tokens[index].identifier) {
