@@ -53,10 +53,10 @@ export default function analyze_ast(ast: ASTItem[]): string {
     // Create output string
     output_string = `Include Paths:\n`;
     include_paths.forEach((include_path) => {
-        output_string += `\t${include_path}\n`
+        output_string += `\t${include_path}\n  `
     })
 
-    output_string += `\n\nFunction Declarations:\n`;
+    output_string += `\n\nFunction Declarations:\n  `;
 
     function_declarations.forEach((func) => {
         let arg_string = "";
@@ -65,14 +65,14 @@ export default function analyze_ast(ast: ASTItem[]): string {
         })
         arg_string = arg_string.substring(0, arg_string.length-2);
 
-        output_string += `\t${func.name} (${arg_string})\n\t\tvariable assignments:\n`;
+        output_string += `\t${func.name} (${arg_string})\n\t\tvariable assignments:\n  `;
         func.variables.forEach((variable) => {
-            output_string += `\t\t\t${variable}\n`
+            output_string += `\t\t\t${variable}\n  `
         })
 
-        output_string += `\t\tfunction calls:\n`;
+        output_string += `\t\tfunction calls:\n  `;
         func.calls.forEach((fcall) => {
-            output_string += `\t\t\t${fcall}\n`
+            output_string += `\t\t\t${fcall}\n  `
         })
     })
 

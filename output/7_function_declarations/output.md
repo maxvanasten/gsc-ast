@@ -2,11 +2,12 @@ Include Paths:
 
 
 Function Declarations:
-	init ()
+  	init ()
 		variable assignments:
-		function calls:
-			print
-	function_with_args (arg1, arg2)
+  		function calls:
+  			print
+  	function_with_args (arg1, arg2)
 		variable assignments:
-		function calls:
-			print
+  		function calls:
+  			print
+  
