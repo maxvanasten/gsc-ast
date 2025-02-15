@@ -15,7 +15,7 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
     let output: ASTItem[] = [];
 
     while (index < tokens.length) {
-        console.log(`[${index} / ${tokens.length}] token: ${tokens[index].identifier}, (${tokens[index].content})`);
+        // console.log(`[${index} / ${tokens.length}] token: ${tokens[index].identifier}, (${tokens[index].content})`);
         switch (tokens[index].identifier) {
             case "#include": {
                 let result = get_matching_tokens(tokens, ["#include", "identifier", ";"], index);
