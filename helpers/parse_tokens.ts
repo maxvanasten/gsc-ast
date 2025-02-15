@@ -7,6 +7,7 @@ export type ASTItem = {
     content?: string;
     children?: ASTItem[];
     file_path?: string;
+    arguments?: ASTItem[];
 }
 
 export default function parse_tokens(tokens: Token[]): ASTItem[] {
@@ -131,6 +132,7 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                 if (output.length > 0) {
                     if (output[output.length - 1].type == "function_call") {
                         const func_name = output[output.length - 1].content;
+                        const args = output[output.length - 1].children;
 
                         // Get until }
                         const result = get_until_token(tokens, "}", index);
@@ -148,7 +150,8 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                         output.push({
                             type: "function_declaration",
                             content: func_name,
-                            children: func_ast
+                            children: func_ast,
+                            arguments: args
                         })
                     } else {
                         index++;
