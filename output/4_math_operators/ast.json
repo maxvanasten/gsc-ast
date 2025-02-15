@@ -72,15 +72,5 @@
   {
     "type": "number",
     "content": "7"
-  },
-  {
-    "type": "unhandled_token",
-    "content": ";",
-    "children": [
-      {
-        "type": "content",
-        "content": ""
-      }
-    ]
   }
 ]

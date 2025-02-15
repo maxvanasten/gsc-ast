@@ -44,6 +44,15 @@ input_files.forEach((input_file) => {
     // Parse tokens
     const ast = parse_tokens(tokens);
 
+    // Remove some unhandled_token items for final result
+    ast.forEach((item) => {
+        if (item.type == "unhandled_token") {
+            if (item.content == ";") {
+                ast.splice(ast.indexOf(item), 1);
+            }
+        }
+    })
+
     let ast_log_string = "";
     ast.forEach((item) => {
         switch (item.type) {
