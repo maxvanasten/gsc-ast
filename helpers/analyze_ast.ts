@@ -7,6 +7,8 @@ type func_output = {
     calls: string[]
 }
 
+const tab = `&nbsp;&nbsp;&nbsp;&nbsp;`;
+
 export default function analyze_ast(ast: ASTItem[]): string {
     let output_string = "";
 
@@ -51,28 +53,28 @@ export default function analyze_ast(ast: ASTItem[]): string {
     })
 
     // Create output string
-    output_string = `Include Paths:\n`;
+    output_string = `Include Paths:<br />`;
     include_paths.forEach((include_path) => {
-        output_string += `\t${include_path}\n  `
+        output_string += `${tab}${include_path}<br />`
     })
 
-    output_string += `\n\nFunction Declarations:\n  `;
+    output_string += `<br /><br />Function Declarations:<br />`;
 
     function_declarations.forEach((func) => {
         let arg_string = "";
         func.arguments.forEach((argument) => {
             arg_string += `${argument}, `;
         })
-        arg_string = arg_string.substring(0, arg_string.length-2);
+        arg_string = arg_string.substring(0, arg_string.length - 2);
 
-        output_string += `\t${func.name} (${arg_string})\n\t\tvariable assignments:\n  `;
+        output_string += `${tab}${func.name} (${arg_string})<br />${tab}${tab}variable assignments:<br />  `;
         func.variables.forEach((variable) => {
-            output_string += `\t\t\t${variable}\n  `
+            output_string += `${tab}${tab}${tab}${variable}<br />  `
         })
 
-        output_string += `\t\tfunction calls:\n  `;
+        output_string += `${tab}${tab}function calls:<br />  `;
         func.calls.forEach((fcall) => {
-            output_string += `\t\t\t${fcall}\n  `
+            output_string += `${tab}${tab}${tab}${fcall}<br />  `
         })
     })
 
