@@ -62,7 +62,7 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                     break;
                 }
 
-                if (tokens[index - 1].identifier == "identifier" || tokens[index - 1].identifier == "variable_reference") {
+                if (tokens[index - 1].identifier == "identifier") {
                     const variable_name: string = tokens[index - 1].content?.replaceAll(" ", "") || "undefined"
 
                     // Get tokens until terminator
