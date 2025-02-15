@@ -1,0 +1,22 @@
+[
+  {
+    "type": "function_declaration",
+    "content": "init",
+    "children": [
+      {
+        "type": "function_call",
+        "content": "print",
+        "children": [
+          {
+            "type": "string",
+            "content": "Hello, world!"
+          }
+        ]
+      },
+      {
+        "type": "newline",
+        "content": ""
+      }
+    ]
+  }
+]

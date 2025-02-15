@@ -118,9 +118,42 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                     })
                     output.push({
                         type: "function_call",
-                        content: function_name,
+                        content: function_name.replaceAll(" ", ""),
                         children: func_ast
                     })
+                } else {
+                    index++;
+                }
+
+                break;
+            }
+            case "{": {
+                if (output.length > 0) {
+                    if (output[output.length - 1].type == "function_call") {
+                        const func_name = output[output.length - 1].content;
+
+                        // Get until }
+                        const result = get_until_token(tokens, "}", index);
+                        if (!result.valid) break;
+                        index = result.index;
+
+                        // Check to delete potential previously added function_call
+                        if (output.length > 0) {
+                            if (output[output.length - 1].type == "function_call") {
+                                output.splice(output.length - 1, 1);
+                            }
+                        }
+
+                        let func_ast = parse_tokens(result.tokens);
+                        output.push({
+                            type: "function_declaration",
+                            content: func_name,
+                            children: func_ast
+                        })
+                    } else {
+                        index++;
+                        break;
+                    }
                 } else {
                     index++;
                 }
