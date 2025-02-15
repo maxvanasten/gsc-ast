@@ -38,7 +38,7 @@ input_files.forEach((input_file) => {
     console.log(`\t\tTokens: \n\t\t\t${tokens_log_string}`);
 
     console.log(`\t\tWriting tokens to ${output_path}/tokens.json`);
-    fs.writeFileSync(`${output_path}/tokens.json`, JSON.stringify(tokens));
+    fs.writeFileSync(`${output_path}/tokens.json`, JSON.stringify(tokens, null, 2));
 
     console.log(`\n\n\n\n\n\t${name}[Parser]`)
     // Parse tokens
