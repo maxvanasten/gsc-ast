@@ -58,10 +58,7 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                 break;
             }
             case "=": {
-
-
                 // Check if previous token is identifier
-                console.log(`parse_tokens: previous token: ${tokens[index - 1].identifier}, (${tokens[index - 1].content})`)
                 if (index <= 0) {
                     index++;
                     break;
@@ -97,6 +94,8 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
             }
             case "+":
             case "-":
+            case ">":
+            case "<":
             case "/":
             case "*": {
                 if (tokens[index].identifier == "/") {
