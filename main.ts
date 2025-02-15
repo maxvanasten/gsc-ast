@@ -72,5 +72,5 @@ input_files.forEach((input_file) => {
     console.log(`\t\tASTItems: \n\t\t\t${ast_log_string}`);
 
     console.log(`\t\tWriting AST to ${output_path}/ast.json`);
-    fs.writeFileSync(`${output_path}/ast.json`, JSON.stringify(ast));
+    fs.writeFileSync(`${output_path}/ast.json`, JSON.stringify(ast, null, 2));
 })

@@ -1,1 +1,74 @@
-[{"type":"variable_assignment","content":"player_name","children":[{"type":"string","content":"Hasj(Blok"},{"type":"math_operator","content":"+"},{"type":"number","content":"2"}]},{"type":"variable_assignment","content":"greeting","children":[{"type":"string","content":"Hello, "},{"type":"math_operator","content":"+"},{"type":"variable_reference","content":"player_name"}]},{"type":"variable_assignment","content":"age","children":[{"type":"number","content":"22"}]},{"type":"variable_assignment","content":"greeting_2","children":[{"type":"string","content":"You are "},{"type":"math_operator","content":"+"},{"type":"variable_reference","content":"age"},{"type":"math_operator","content":"+"},{"type":"string","content":" years old."}]}]
+[
+  {
+    "type": "variable_assignment",
+    "content": "player_name",
+    "children": [
+      {
+        "type": "string",
+        "content": "Hasj(Blok"
+      },
+      {
+        "type": "math_operator",
+        "content": "+"
+      },
+      {
+        "type": "number",
+        "content": "2"
+      }
+    ]
+  },
+  {
+    "type": "variable_assignment",
+    "content": "greeting",
+    "children": [
+      {
+        "type": "string",
+        "content": "Hello, "
+      },
+      {
+        "type": "math_operator",
+        "content": "+"
+      },
+      {
+        "type": "variable_reference",
+        "content": "player_name"
+      }
+    ]
+  },
+  {
+    "type": "variable_assignment",
+    "content": "age",
+    "children": [
+      {
+        "type": "number",
+        "content": "22"
+      }
+    ]
+  },
+  {
+    "type": "variable_assignment",
+    "content": "greeting_2",
+    "children": [
+      {
+        "type": "string",
+        "content": "You are "
+      },
+      {
+        "type": "math_operator",
+        "content": "+"
+      },
+      {
+        "type": "variable_reference",
+        "content": "age"
+      },
+      {
+        "type": "math_operator",
+        "content": "+"
+      },
+      {
+        "type": "string",
+        "content": " years old."
+      }
+    ]
+  }
+]

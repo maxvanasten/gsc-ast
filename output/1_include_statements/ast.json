@@ -1,1 +1,18 @@
-[{"type":"include_statement","file_path":"common_scripts\\utility"},{"type":"include_statement","file_path":"maps\\mp\\gametypes_zm\\_hud_util"},{"type":"include_statement","file_path":"maps\\mp\\zombies\\_zm_utility"},{"type":"include_statement","file_path":"some_script"}]
+[
+  {
+    "type": "include_statement",
+    "file_path": "common_scripts\\utility"
+  },
+  {
+    "type": "include_statement",
+    "file_path": "maps\\mp\\gametypes_zm\\_hud_util"
+  },
+  {
+    "type": "include_statement",
+    "file_path": "maps\\mp\\zombies\\_zm_utility"
+  },
+  {
+    "type": "include_statement",
+    "file_path": "some_script"
+  }
+]

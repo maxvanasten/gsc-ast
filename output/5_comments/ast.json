@@ -1,1 +1,16 @@
-[{"type":"comment","content":" This is a comment"},{"type":"variable_assignment","content":"this","children":[{"type":"string","content":"no longer a comment"}]}]
+[
+  {
+    "type": "comment",
+    "content": " This is a comment"
+  },
+  {
+    "type": "variable_assignment",
+    "content": "this",
+    "children": [
+      {
+        "type": "string",
+        "content": "no longer a comment"
+      }
+    ]
+  }
+]
