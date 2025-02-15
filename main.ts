@@ -22,7 +22,7 @@ input_files.forEach((input_file) => {
 
     const content = fs.readFileSync(input_path, { encoding: "utf8" });
 
-    console.log(`\t${name}[Tokenizer]`)
+    console.log(`=========================================================\n\t${name}[Tokenizer]`)
     // Tokenize content
     const tokenizer = new Tokenizer(content);
     const tokens = tokenizer.tokenize();
@@ -49,11 +49,17 @@ input_files.forEach((input_file) => {
         switch (item.type) {
             case "include_statement":
             case "string":
+            case "variable_reference":
                 ast_log_string += `${item.type} "${item.content}"\n\t\t\t`;
                 break;
             case "variable_assignment":
                 if (!item.children) break;
-                ast_log_string += `${item.type} (${item.children[0].content} = ${item.content})\n\t\t\t`;
+                ast_log_string += `${item.type} (variable_name: ${item.content})\n`;
+                // Get rest of children
+                item.children.forEach((child) => {
+                    ast_log_string += `\t\t\t\t${child.type}: ${child.content}\n`;
+                })
+                ast_log_string += `\n\t\t\t`;
                 break;
             default:
                 ast_log_string += `${item.type}\n\t\t\t`;
