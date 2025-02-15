@@ -1,1 +1,1 @@
-[{"type":"string","content":"test_st'ring_1"},{"type":"string","content":"Hello, world"},{"type":"string","content":"test_s{}$$%$tring_2"}]
+[{"type":"string","content":"test_st'ring_1"},{"type":"newline","content":""},{"type":"string","content":"Hello, world"},{"type":"newline","content":""},{"type":"string","content":"test_s{}$$%$tring_2"}]
