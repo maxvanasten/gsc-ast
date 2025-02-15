@@ -53,7 +53,7 @@ export default function analyze_ast(ast: ASTItem[]): string {
     })
 
     // Create output string
-    output_string = `Include Paths:<br />`;
+    output_string = `## Include Paths:<br />`;
     include_paths.forEach((include_path) => {
         output_string += `${tab}${include_path}<br />`
     })
@@ -69,12 +69,12 @@ export default function analyze_ast(ast: ASTItem[]): string {
 
         output_string += `${tab}${func.name} (${arg_string})<br />${tab}${tab}variable assignments:<br />  `;
         func.variables.forEach((variable) => {
-            output_string += `${tab}${tab}${tab}${variable}<br />  `
+            output_string += `${tab}${tab}${tab}-${variable}<br />  `
         })
 
         output_string += `${tab}${tab}function calls:<br />  `;
         func.calls.forEach((fcall) => {
-            output_string += `${tab}${tab}${tab}${fcall}<br />  `
+            output_string += `${tab}${tab}${tab}-${fcall}<br />  `
         })
     })
 
