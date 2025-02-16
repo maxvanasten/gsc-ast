@@ -1,7 +1,7 @@
 import fs from "fs";
 import Tokenizer from "./tokenizer";
 
-import parse_tokens, { ASTItem } from "./helpers/parse_tokens";
+import parse_tokens from "./helpers/parse_tokens";
 
 import analyze_ast from "./helpers/analyze_ast";
 import sanitize_ast from "./helpers/sanitize_ast";
