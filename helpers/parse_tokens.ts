@@ -15,12 +15,12 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
     let output: ASTItem[] = [];
 
     while (index < tokens.length) {
-        // console.log(`[${index} / ${tokens.length}] token: ${tokens[index].identifier}, (${tokens[index].content})`);
+        console.log(`[${index} / ${tokens.length}] token: ${tokens[index].identifier}, (${tokens[index].content})`);
         switch (tokens[index].identifier) {
             case "#include": {
                 let result = get_matching_tokens(tokens, ["#include", "identifier", ";"], index);
-                if (!result.valid) break;
                 index = result.index;
+                if (!result.valid) break;
                 output.push({
                     type: "include_statement",
                     file_path: result.tokens[1].content
@@ -30,8 +30,8 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
             case "'":
             case '"': {
                 let result = get_until_token(tokens, tokens[index].identifier, index);
-                if (!result.valid) break;
                 index = result.index;
+                if (!result.valid) break;
 
                 // Stringify token array
                 let string = "";
@@ -68,8 +68,8 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
 
                     // Get tokens until terminator
                     let result = get_until_token(tokens, ";", index);
-                    if (!result.valid) break;
                     index = result.index;
+                    if (!result.valid) break;
 
                     // Check if previous item in ast is variable_reference
                     if (output.length > 0) {
@@ -101,8 +101,8 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                     const function_name: string = tokens[index - 1].content;
                     // Get tokens until )
                     const result = get_until_token(tokens, ")", index);
-                    if (!result.valid) break;
                     index = result.index;
+                    if (!result.valid) break;
 
                     // Check to delete potential previously added variable_reference
                     if (output.length > 0) {
@@ -120,7 +120,7 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                     output.push({
                         type: "function_call",
                         content: function_name.replaceAll(" ", ""),
-                        children: func_ast
+                        arguments: func_ast
                     })
                 } else {
                     index++;
@@ -130,14 +130,15 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
             }
             case "{": {
                 if (output.length > 0) {
+                    console.log(`CHECKING function_call against ${output[output.length - 1].type} (${output[output.length - 1].content})`)
                     if (output[output.length - 1].type == "function_call") {
                         const func_name = output[output.length - 1].content;
-                        const args = output[output.length - 1].children;
+                        const args = output[output.length - 1].arguments;
 
                         // Get until }
                         const result = get_until_token(tokens, "}", index);
-                        if (!result.valid) break;
                         index = result.index;
+                        if (!result.valid) break;
 
                         // Check to delete potential previously added function_call
                         if (output.length > 0) {
@@ -175,15 +176,14 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                         if (tokens[index + 1].identifier == "/") {
                             // Comment until newline
                             let result = get_until_token(tokens, "newline", index);
-                            if (result.valid) {
-                                index = result.index;
+                            index = result.index;
+                            if (!result.valid) break;
 
-                                output.push({
-                                    type: "comment",
-                                    content: result.tokens[1].content
-                                })
-                                break;
-                            }
+                            output.push({
+                                type: "comment",
+                                content: result.tokens[1].content
+                            })
+                            break;
                         }
                     }
                 }
@@ -235,14 +235,14 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                 index++;
                 break;
             }
-            // case "newline": {
-            //     output.push({
-            //         type: "newline",
-            //         content: ""
-            //     })
-            //     index++;
-            //     break;
-            // }
+            case "newline": {
+                // output.push({
+                //     type: "newline",
+                //     content: ""
+                // })
+                index++;
+                break;
+            }
             default:
                 output.push({
                     type: "unhandled_token",
