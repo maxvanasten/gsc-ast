@@ -1,0 +1,47 @@
+{
+  "include_paths": [
+    "common_scripts\\utility",
+    "maps\\mp\\gametypes_zm\\_hud_util",
+    "maps\\mp\\zombies\\_zm_utility",
+    "some_script"
+  ],
+  "function_declarations": [
+    {
+      "name": "init",
+      "arguments": [],
+      "variable_assignments": [
+        "player_name",
+        "player_age",
+        "message"
+      ],
+      "function_calls": [
+        {
+          "name": "print",
+          "arguments": [
+            "Message: ",
+            "+",
+            "message"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "greet_player",
+      "arguments": [
+        "player_name",
+        "player_age"
+      ],
+      "variable_assignments": [
+        "welcome_message"
+      ],
+      "function_calls": [
+        {
+          "name": "print",
+          "arguments": [
+            "welcome_message"
+          ]
+        }
+      ]
+    }
+  ]
+}

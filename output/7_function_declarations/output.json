@@ -1,0 +1,40 @@
+{
+  "include_paths": [],
+  "function_declarations": [
+    {
+      "name": "init",
+      "arguments": [],
+      "variable_assignments": [],
+      "function_calls": [
+        {
+          "name": "print",
+          "arguments": [
+            "Hello, world!"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "function_with_args",
+      "arguments": [
+        "arg1",
+        "arg2"
+      ],
+      "variable_assignments": [],
+      "function_calls": [
+        {
+          "name": "print",
+          "arguments": [
+            "Arg1: ",
+            "+",
+            "arg1",
+            "+",
+            ", Arg2: ",
+            "+",
+            "arg2"
+          ]
+        }
+      ]
+    }
+  ]
+}

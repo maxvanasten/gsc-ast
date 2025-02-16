@@ -6,12 +6,16 @@
       {
         "type": "function_call",
         "content": "print",
-        "children": [
+        "arguments": [
           {
             "type": "string",
             "content": "Hello, world!"
           }
         ]
+      },
+      {
+        "type": "unhandled_token",
+        "content": ";"
       }
     ],
     "arguments": []
@@ -23,7 +27,7 @@
       {
         "type": "function_call",
         "content": "print",
-        "children": [
+        "arguments": [
           {
             "type": "string",
             "content": "Arg1: "
@@ -53,6 +57,10 @@
             "content": "arg2"
           }
         ]
+      },
+      {
+        "type": "unhandled_token",
+        "content": ";"
       }
     ],
     "arguments": [

@@ -24,6 +24,10 @@
     "content": "init",
     "children": [
       {
+        "type": "number",
+        "content": ""
+      },
+      {
         "type": "comment",
         "content": "Set some variables"
       },
@@ -46,6 +50,10 @@
             "content": "22"
           }
         ]
+      },
+      {
+        "type": "number",
+        "content": ""
       },
       {
         "type": "comment",
@@ -94,13 +102,17 @@
         ]
       },
       {
+        "type": "number",
+        "content": ""
+      },
+      {
         "type": "comment",
         "content": "Output message"
       },
       {
         "type": "function_call",
         "content": "print",
-        "children": [
+        "arguments": [
           {
             "type": "string",
             "content": "Message: "
@@ -114,6 +126,10 @@
             "content": "message"
           }
         ]
+      },
+      {
+        "type": "unhandled_token",
+        "content": ";"
       }
     ],
     "arguments": []
@@ -167,12 +183,16 @@
       {
         "type": "function_call",
         "content": "print",
-        "children": [
+        "arguments": [
           {
             "type": "variable_reference",
             "content": "welcome_message"
           }
         ]
+      },
+      {
+        "type": "unhandled_token",
+        "content": ";"
       }
     ],
     "arguments": [

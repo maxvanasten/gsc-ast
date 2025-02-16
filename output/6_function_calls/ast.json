@@ -2,7 +2,7 @@
   {
     "type": "function_call",
     "content": "print",
-    "children": [
+    "arguments": [
       {
         "type": "string",
         "content": "Hello, world!"
@@ -12,7 +12,7 @@
   {
     "type": "function_call",
     "content": "another_function",
-    "children": [
+    "arguments": [
       {
         "type": "variable_reference",
         "content": "arg1"
