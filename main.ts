@@ -4,28 +4,11 @@ import Tokenizer from "./tokenizer";
 import parse_tokens, { ASTItem } from "./helpers/parse_tokens";
 
 import analyze_ast from "./helpers/analyze_ast";
+import sanitize_ast from "./helpers/sanitize_ast";
 
 const input_files = fs.readdirSync(`./input`);
 
 if (!fs.existsSync("./output")) fs.mkdirSync("./output");
-
-// Remove some unneccessary items for final result
-function sanitize(ast: ASTItem[]): ASTItem[] {
-    for (let i = ast.length - 1; i >= 0; i--) {
-        if (ast[i].type == "unhandled_token") {
-            switch (ast[i].content) {
-                case "newline":
-                case ";":
-                    ast.splice(i, 1);
-                    break;
-            }
-        } else if (ast[i].type == "number" && ast[i].content == "") {
-            ast.splice(i, 1);
-        }
-    }
-
-    return ast;
-}
 
 console.log(`[gsc-ast] Attempting to parse input files...`);
 input_files.forEach((input_file) => {
@@ -62,10 +45,13 @@ input_files.forEach((input_file) => {
 
     console.log(`\n\n\n\n\n\t${name}[Parser]`)
     // Parse tokens
-    const ast = sanitize(parse_tokens(tokens));
+    const ast = sanitize_ast(parse_tokens(tokens));
     ast.forEach((item) => {
         if (item.arguments) {
-            item.arguments = sanitize(item.arguments);
+            item.arguments = sanitize_ast(item.arguments);
+        }
+        if (item.children) {
+            item.children = sanitize_ast(item.children);
         }
     })
 
