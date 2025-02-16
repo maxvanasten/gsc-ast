@@ -3,13 +3,18 @@ import { ASTItem } from "./parse_tokens";
 type function_declaration = {
     name: string;
     arguments: string[];
-    variable_assignments: string[];
+    variable_assignments: variable_assignment[];
     function_calls: function_call[];
 }
 
 type function_call = {
     name: string;
     arguments: string[];
+}
+
+type variable_assignment = {
+    name: string;
+    components: string[]
 }
 
 type ASTOutput = {
@@ -50,7 +55,18 @@ export default function analyze_ast(ast: ASTItem[]): ASTOutput {
                 if (ast_item.children) {
                     ast_item.children.forEach((child) => {
                         if (child.type == "variable_assignment" && child.content) {
-                            func_dec.variable_assignments.push(child.content);
+                            let va: variable_assignment = {
+                                name: child.content,
+                                components: []
+                            }
+                            if (child.children) {
+                                child.children.forEach((component) => {
+                                    if (component.content) {
+                                        va.components.push(component.content);
+                                    }
+                                })
+                            }
+                            func_dec.variable_assignments.push(va);
                         }
                         if (child.type == "function_call" && child.content) {
                             const func_call: function_call = {
