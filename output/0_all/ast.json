@@ -24,10 +24,6 @@
     "content": "init",
     "children": [
       {
-        "type": "number",
-        "content": ""
-      },
-      {
         "type": "comment",
         "content": "Set some variables"
       },
@@ -50,10 +46,6 @@
             "content": "22"
           }
         ]
-      },
-      {
-        "type": "number",
-        "content": ""
       },
       {
         "type": "comment",
@@ -102,10 +94,6 @@
         ]
       },
       {
-        "type": "number",
-        "content": ""
-      },
-      {
         "type": "comment",
         "content": "Output message"
       },
@@ -126,10 +114,6 @@
             "content": "message"
           }
         ]
-      },
-      {
-        "type": "unhandled_token",
-        "content": ";"
       }
     ],
     "arguments": []
@@ -189,10 +173,6 @@
             "content": "welcome_message"
           }
         ]
-      },
-      {
-        "type": "unhandled_token",
-        "content": ";"
       }
     ],
     "arguments": [

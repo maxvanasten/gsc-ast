@@ -12,10 +12,6 @@
             "content": "Hello, world!"
           }
         ]
-      },
-      {
-        "type": "unhandled_token",
-        "content": ";"
       }
     ],
     "arguments": []
@@ -57,10 +53,6 @@
             "content": "arg2"
           }
         ]
-      },
-      {
-        "type": "unhandled_token",
-        "content": ";"
       }
     ],
     "arguments": [

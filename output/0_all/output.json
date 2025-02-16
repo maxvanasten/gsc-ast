@@ -10,9 +10,32 @@
       "name": "init",
       "arguments": [],
       "variable_assignments": [
-        "player_name",
-        "player_age",
-        "message"
+        {
+          "name": "player_name",
+          "components": [
+            "Max"
+          ]
+        },
+        {
+          "name": "player_age",
+          "components": [
+            "22"
+          ]
+        },
+        {
+          "name": "message",
+          "components": [
+            "Hello, ",
+            "+",
+            "player_name",
+            "+",
+            ". You are ",
+            "+",
+            "player_age",
+            "+",
+            " years old."
+          ]
+        }
       ],
       "function_calls": [
         {
@@ -32,7 +55,20 @@
         "player_age"
       ],
       "variable_assignments": [
-        "welcome_message"
+        {
+          "name": "welcome_message",
+          "components": [
+            "Welcome, ",
+            "+",
+            "player_name",
+            "+",
+            ". You are ",
+            "+",
+            "player_age",
+            "+",
+            " years old."
+          ]
+        }
       ],
       "function_calls": [
         {
