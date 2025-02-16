@@ -1,82 +1,79 @@
 import { ASTItem } from "./parse_tokens";
 
-type func_output = {
-    name: string,
-    variables: string[],
-    arguments: string[],
-    calls: string[]
+type function_declaration = {
+    name: string;
+    arguments: string[];
+    variable_assignments: string[];
+    function_calls: function_call[];
 }
 
-const tab = `&nbsp;&nbsp;&nbsp;&nbsp;`;
+type function_call = {
+    name: string;
+    arguments: string[];
+}
 
-export default function analyze_ast(ast: ASTItem[]): string {
-    let output_string = "";
+type ASTOutput = {
+    include_paths: string[];
+    function_declarations: function_declaration[];
+}
 
-    let include_paths: string[] = [];
-    let function_declarations: func_output[] = [];
-    let function_calls: string[] = [];
+export default function analyze_ast(ast: ASTItem[]): ASTOutput {
+    const output: ASTOutput = {
+        include_paths: [],
+        function_declarations: [],
+    }
 
-    ast.forEach((item) => {
-        if (item.type == "include_statement") {
-            if (!item.file_path) return console.error(`Encountered an include_statement with an undefined file_path property.`);
-            include_paths.push(item.file_path || "no path");
-        }
-        if (item.type == "function_declaration" && item.content) {
-            let func: func_output = {
-                name: item.content,
-                variables: [],
-                arguments: [],
-                calls: []
+    ast.forEach((ast_item) => {
+        switch (ast_item.type) {
+            case "include_statement": {
+                if (!ast_item.file_path) break;
+                output.include_paths.push(ast_item.file_path);
+                break;
             }
-            if (!item.children) return console.error(`Error: function ${func.name} has no children.`);
-
-            item.children.forEach((child) => {
-                if (child.type == "variable_assignment") {
-                    if (!child.content) return console.error(`Error: variable_assignment has no name.`);
-                    func.variables.push(child.content);
+            case "function_declaration": {
+                if (!ast_item.content) break;
+                const func_dec: function_declaration = {
+                    name: ast_item.content,
+                    arguments: [],
+                    variable_assignments: [],
+                    function_calls: []
                 }
-                if (child.type == "function_call") {
-                    if (!child.content) return console.error(`Error: function_call has no name`);
-                    func.calls.push(child.content);
-                }
-            })
 
-            if (item.arguments) {
-                item.arguments.forEach((arg) => {
-                    if (arg.content) {
-                        func.arguments.push(arg.content);
-                    }
-                })
+                if (ast_item.arguments) {
+                    ast_item.arguments.forEach((argument) => {
+                        if (argument.content) {
+                            func_dec.arguments.push(argument.content);
+                        }
+                    })
+                }
+
+                if (ast_item.children) {
+                    ast_item.children.forEach((child) => {
+                        if (child.type == "variable_assignment" && child.content) {
+                            func_dec.variable_assignments.push(child.content);
+                        }
+                        if (child.type == "function_call" && child.content) {
+                            const func_call: function_call = {
+                                name: child.content,
+                                arguments: []
+                            }
+                            if (child.arguments) {
+                                child.arguments.forEach((argument) => {
+                                    if (argument.content) {
+                                        func_call.arguments.push(argument.content);
+                                    }
+                                })
+                            }
+                            func_dec.function_calls.push(func_call);
+                        }
+                    })
+                }
+
+                output.function_declarations.push(func_dec);
+                break;
             }
-            function_declarations.push(func);
         }
     })
 
-    // Create output string
-    output_string = `## Include Paths:<br />`;
-    include_paths.forEach((include_path) => {
-        output_string += `${tab}${include_path}<br />`
-    })
-
-    output_string += `<br /><br />Function Declarations:<br />`;
-
-    function_declarations.forEach((func) => {
-        let arg_string = "";
-        func.arguments.forEach((argument) => {
-            arg_string += `${argument}, `;
-        })
-        arg_string = arg_string.substring(0, arg_string.length - 2);
-
-        output_string += `${tab}${func.name} (${arg_string})<br />${tab}${tab}variable assignments:<br />  `;
-        func.variables.forEach((variable) => {
-            output_string += `${tab}${tab}${tab}-${variable}<br />  `
-        })
-
-        output_string += `${tab}${tab}function calls:<br />  `;
-        func.calls.forEach((fcall) => {
-            output_string += `${tab}${tab}${tab}-${fcall}<br />  `
-        })
-    })
-
-    return output_string;
+    return output;
 }

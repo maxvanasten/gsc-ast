@@ -99,5 +99,5 @@ input_files.forEach((input_file) => {
     console.log(`\t\tWriting AST to ${output_path}/ast.json`);
     fs.writeFileSync(`${output_path}/ast.json`, JSON.stringify(ast, null, 2));
 
-    fs.writeFileSync(`${output_path}/output.md`, analyze_ast(ast));
+    fs.writeFileSync(`${output_path}/output.json`, JSON.stringify(analyze_ast(ast), null, 2));
 })
