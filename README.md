@@ -7,7 +7,7 @@ GSC-AST is far from functional, currently its just a proof of concept. The end g
 
 ## Demo
 
-The `./input/0_all.gsc` file serves as a demonstration of the current capabilities of GSC-AST. Its output can be found in `./output/0_all`. GSC-AST exports tokens, an abstract syntax tree and a human readable analysis of the input code.
+The [0_all.gsc](https://github.com/maxvanasten/gsc-ast/blob/main/input/0_all.gsc) file serves as a demonstration of the current capabilities of GSC-AST. Its output can be found in [output/0_all/](https://github.com/maxvanasten/gsc-ast/tree/main/output/0_all). GSC-AST exports tokens, an abstract syntax tree and a human readable analysis of the input code.
 
 ## Current coverage
 
