@@ -64,8 +64,8 @@ input_files.forEach((input_file) => {
     // Parse tokens
     const ast = sanitize(parse_tokens(tokens));
     ast.forEach((item) => {
-        if (item.children) {
-            item.children = sanitize(item.children);
+        if (item.arguments) {
+            item.arguments = sanitize(item.arguments);
         }
     })
 
@@ -81,10 +81,10 @@ input_files.forEach((input_file) => {
                 ast_log_string += `${item.type} "${item.content}"\n\t\t\t`;
                 break;
             case "variable_assignment":
-                if (!item.children) break;
+                if (!item.arguments) break;
                 ast_log_string += `${item.type} (variable_name: ${item.content})\n`;
                 // Get rest of children
-                item.children.forEach((child) => {
+                item.arguments.forEach((child) => {
                     ast_log_string += `\t\t\t\t${child.type}: ${child.content}\n`;
                 })
                 ast_log_string += `\n\t\t\t`;
