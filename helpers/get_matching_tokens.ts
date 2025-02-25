@@ -24,7 +24,6 @@ export default function get_matching_tokens(input_tokens: Token[], targets: stri
 
     result.valid = true;
     for (let i = 0; i < targets.length; i++) {
-        // console.log(`targets[i]: ${targets[i]}, search_buffer[i] = ${search_buffer[i]}`);
         if (targets[i] != search_buffer[i]) result.valid = false;
     }
 

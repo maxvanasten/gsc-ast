@@ -9,10 +9,8 @@ export default function get_until_token(input_tokens: Token[], target_token_iden
     }
 
     while (result.index < input_tokens.length && !result.valid) {
-        console.log(`TOKEN: ${input_tokens[result.index].identifier}`)
         if (input_tokens[result.index].identifier == scope_token) {
             // Get until end of scope
-            console.log(`FOUND SCOPE`);
             let scope_result = get_until_token(input_tokens, target_token_identifier, result.index);
             if (scope_result.valid) {
                 result.tokens.push({
@@ -34,17 +32,13 @@ export default function get_until_token(input_tokens: Token[], target_token_iden
     }
 
     if (result.valid) {
-        console.log(`=======================`)
-        console.log(`RETURNING RESULT (GET_UNTIL_TOKEN):`);
-        console.dir(result.tokens);
-        console.log(`=======================`)
         result.tokens.splice(result.tokens.length - 1, 1);
         return result;
     }
 
     result.index++;
 
-    console.log(`[get_until_token] index: ${result.index}, tokens_length: ${result.tokens.length}`);
+    //console.log(`[get_until_token] index: ${result.index}, tokens_length: ${result.tokens.length}`);
 
     return result;
 }

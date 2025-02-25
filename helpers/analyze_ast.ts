@@ -69,7 +69,6 @@ export default function analyze_ast(ast: ASTItem[]): ASTOutput {
 
                             // NOTE: Example of AST analysis
                             // Check if level variable, if so write to file
-                            console.log(`LEVELLEVELLEVEL::::::::::::::::::::::: ${va.name.substring(0, 4)}`)
                             if (va.name.substring(0, 5) == "level") {
                                 output.level_variables.push(va.name);
                             }
