@@ -20,12 +20,14 @@ type variable_assignment = {
 type ASTOutput = {
     include_paths: string[];
     function_declarations: function_declaration[];
+    level_variables: string[];
 }
 
 export default function analyze_ast(ast: ASTItem[]): ASTOutput {
     const output: ASTOutput = {
         include_paths: [],
         function_declarations: [],
+        level_variables: []
     }
 
     ast.forEach((ast_item) => {
@@ -61,11 +63,17 @@ export default function analyze_ast(ast: ASTItem[]): ASTOutput {
                             }
                             if (child.children) {
                                 child.children.forEach((component) => {
-                                    if (component.content) {
-                                        va.components.push(component.content);
-                                    }
+                                    if (component.content) va.components.push(component.content);
                                 })
                             }
+
+                            // NOTE: Example of AST analysis
+                            // Check if level variable, if so write to file
+                            console.log(`LEVELLEVELLEVEL::::::::::::::::::::::: ${va.name.substring(0, 4)}`)
+                            if (va.name.substring(0, 5) == "level") {
+                                output.level_variables.push(va.name);
+                            }
+
                             func_dec.variable_assignments.push(va);
                         }
                         if (child.type == "function_call" && child.content) {
@@ -101,6 +109,9 @@ export default function analyze_ast(ast: ASTItem[]): ASTOutput {
             }
         }
     })
+
+    // Check for duplicate level variables
+    output.level_variables = [...new Set(output.level_variables)];
 
     return output;
 }

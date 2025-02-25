@@ -5,5 +5,6 @@
     "maps\\mp\\zombies\\_zm_utility",
     "some_script"
   ],
-  "function_declarations": []
+  "function_declarations": [],
+  "level_variables": []
 }
