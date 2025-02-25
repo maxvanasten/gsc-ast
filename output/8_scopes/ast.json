@@ -1,0 +1,47 @@
+[
+  {
+    "type": "function_declaration",
+    "content": "init",
+    "children": [
+      {
+        "type": "function_call",
+        "content": "print",
+        "arguments": [
+          {
+            "type": "string",
+            "content": "A string with a (scope)"
+          }
+        ]
+      },
+      {
+        "type": "function_call",
+        "content": "a_func_with_scope",
+        "arguments": [
+          {
+            "type": "variable_reference",
+            "content": "some_arg"
+          },
+          {
+            "type": "scope",
+            "children": [
+              {
+                "type": "variable_reference",
+                "content": "scope1"
+              },
+              {
+                "type": "unhandled_token",
+                "content": ","
+              },
+              {
+                "type": "variable_reference",
+                "content": "scope2"
+              }
+            ],
+            "content": "()"
+          }
+        ]
+      }
+    ],
+    "arguments": []
+  }
+]

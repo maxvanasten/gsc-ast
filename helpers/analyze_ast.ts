@@ -75,7 +75,18 @@ export default function analyze_ast(ast: ASTItem[]): ASTOutput {
                             }
                             if (child.arguments) {
                                 child.arguments.forEach((argument) => {
-                                    if (argument.content) {
+                                    if (argument.type == "scope" && argument.children && argument.content) {
+                                        // Parse children
+                                        let scope_string: string = argument.content[0];
+                                        argument.children.forEach((child) => {
+                                            if (child.type != "unhandled_token" && child.content) {
+                                                scope_string += `${child.content}, `;
+                                            }
+                                        })
+                                        scope_string = scope_string.slice(0, scope_string.length - 2);
+                                        scope_string += argument.content[1];
+                                        func_call.arguments.push(scope_string);
+                                    } else if (argument.content) {
                                         func_call.arguments.push(argument.content);
                                     }
                                 })

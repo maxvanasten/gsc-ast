@@ -1,0 +1,25 @@
+{
+  "include_paths": [],
+  "function_declarations": [
+    {
+      "name": "init",
+      "arguments": [],
+      "variable_assignments": [],
+      "function_calls": [
+        {
+          "name": "print",
+          "arguments": [
+            "A string with a (scope)"
+          ]
+        },
+        {
+          "name": "a_func_with_scope",
+          "arguments": [
+            "some_arg",
+            "(scope1, scope2)"
+          ]
+        }
+      ]
+    }
+  ]
+}

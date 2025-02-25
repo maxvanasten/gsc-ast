@@ -27,6 +27,30 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                 })
                 break;
             }
+            case "scope_start": {
+                let scope_characters = tokens[index].content;
+                switch (scope_characters) {
+                    case "(":
+                        scope_characters += ")";
+                        break;
+                    case "{":
+                        scope_characters += "}";
+                        break;
+                    case "[":
+                        scope_characters += "]";
+                        break;
+                }
+
+                let result = get_until_token(tokens, "scope_end", index);
+                index = result.index;
+                if (!result.valid) break;
+                output.push({
+                    type: "scope",
+                    children: parse_tokens(result.tokens),
+                    content: scope_characters
+                });
+                break;
+            }
             case "'":
             case '"': {
                 let result = get_until_token(tokens, tokens[index].identifier, index);
@@ -36,10 +60,14 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                 // Stringify token array
                 let string = "";
                 result.tokens.forEach((token) => {
-                    if (token.content) {
+                    if (token.identifier == "scope_start" || token.identifier == "scope_end") {
                         string += token.content;
                     } else {
-                        string += token.identifier;
+                        if (token.content) {
+                            string += token.content;
+                        } else {
+                            string += token.identifier;
+                        }
                     }
                 })
 
@@ -100,7 +128,7 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                 if (tokens[index - 1].identifier == "identifier") {
                     const function_name: string = tokens[index - 1].content;
                     // Get tokens until )
-                    const result = get_until_token(tokens, ")", index);
+                    const result = get_until_token(tokens, ")", index, "(");
                     index = result.index;
                     if (!result.valid) break;
 
@@ -136,7 +164,7 @@ export default function parse_tokens(tokens: Token[]): ASTItem[] {
                         const args = output[output.length - 1].arguments;
 
                         // Get until }
-                        const result = get_until_token(tokens, "}", index);
+                        const result = get_until_token(tokens, "}", index, "{");
                         index = result.index;
                         if (!result.valid) break;
 

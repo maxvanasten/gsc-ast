@@ -1,7 +1,7 @@
 import { Token } from "../tokenizer";
 import { MatchResult } from "./get_matching_tokens";
 
-export default function get_until_token(input_tokens: Token[], target_token_identifier: string, index: number) {
+export default function get_until_token(input_tokens: Token[], target_token_identifier: string, index: number, scope_token: string = "") {
     let result: MatchResult = {
         valid: false,
         tokens: [],
@@ -9,12 +9,35 @@ export default function get_until_token(input_tokens: Token[], target_token_iden
     }
 
     while (result.index < input_tokens.length && !result.valid) {
+        console.log(`TOKEN: ${input_tokens[result.index].identifier}`)
+        if (input_tokens[result.index].identifier == scope_token) {
+            // Get until end of scope
+            console.log(`FOUND SCOPE`);
+            let scope_result = get_until_token(input_tokens, target_token_identifier, result.index);
+            if (scope_result.valid) {
+                result.tokens.push({
+                    identifier: "scope_start",
+                    content: scope_token
+                });
+                result.tokens.push(...scope_result.tokens);
+                result.tokens.push({
+                    identifier: "scope_end",
+                    content: target_token_identifier
+                });
+                result.index = scope_result.index;
+            }
+        }
+
         if (input_tokens[result.index].identifier == target_token_identifier) result.valid = true;
         result.tokens.push(input_tokens[result.index]);
         result.index++;
     }
 
     if (result.valid) {
+        console.log(`=======================`)
+        console.log(`RETURNING RESULT (GET_UNTIL_TOKEN):`);
+        console.dir(result.tokens);
+        console.log(`=======================`)
         result.tokens.splice(result.tokens.length - 1, 1);
         return result;
     }
