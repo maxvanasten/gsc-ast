@@ -1,5 +1,10 @@
 # GSC-AST
 
+## TODO
+
+- For loops in `output.json`
+- Origin/Color values `(x, y, z)`
+
 ## About
 
 This is a project to turn GSC scripts (from Plutonium T6 specifically) into an Abstract Syntax Tree.
