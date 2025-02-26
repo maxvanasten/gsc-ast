@@ -1,5 +1,7 @@
 # GSC-AST
 
+![image](https://github.com/user-attachments/assets/9f939433-ccf8-48e1-98cd-457e0979a883)
+
 ## TODO
 
 - For loops in `output.json`
