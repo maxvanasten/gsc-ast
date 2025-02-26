@@ -1,6 +1,6 @@
 # GSC-AST
 
-![image](https://github.com/user-attachments/assets/9f939433-ccf8-48e1-98cd-457e0979a883)
+![image](https://github.com/user-attachments/assets/d746aba7-808c-48e7-9ee3-1938dc4cff31)
 
 ## TODO
 
