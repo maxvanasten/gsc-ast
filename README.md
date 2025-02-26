@@ -1,16 +1,14 @@
 # GSC-AST
 
-![image](https://github.com/user-attachments/assets/d746aba7-808c-48e7-9ee3-1938dc4cff31)
-
-## TODO
-
-- For loops in `output.json`
-- Origin/Color values `(x, y, z)`
-
 ## About
 
 This is a project to turn GSC scripts (from Plutonium T6 specifically) into an Abstract Syntax Tree.
 GSC-AST is far from functional, currently its just a proof of concept. The end goal of GSC-AST is to parse all of the dumped T6 scripts into an AST either for use in a language server or other analysis such as finding out every possible level variable and wait_till flag.
+
+## TODO
+
+- For loops, while loops, switch statements, if statements
+- Origin/Color values `(x, y, z)`
 
 ## Usage
 
