@@ -85,47 +85,14 @@ input_files.forEach((input_file) => {
     console.log(`\t\tWriting AST to ${output_path}/ast.json`);
     fs.writeFileSync(`${output_path}/ast.json`, JSON.stringify(ast, null, 2));
 
-    // NOTE: This is an example of how the AST could be used to analyze existing GSC scripts by finding all variables attached to the level object.
-    let level_variables: string[] = [];
-    ast.forEach((item) => {
-        switch (item.type) {
-            case "variable_reference":
-            case "variable_assignment":
-                if (item.content && item.content != "undefined" && item.content.substring(0, 6) == "level.") level_variables.push(item.content);
-                break;
-        }
+    const analysis = analyze_ast(ast);
+
+    let level_variables_str = `# Level Variables\n\n### ${name}\n\n`;
+    analysis.level_variables.forEach((l_var) => {
+        level_variables_str += `- ${l_var}\n`;
     })
 
-    if (level_variables.length) {
-        level_variables = [...new Set(level_variables)];
+    fs.writeFileSync(`${output_path}/level_variables.md`, level_variables_str);
 
-        let level_variables_str = "# Level Variables\n\n";
-        level_variables.forEach((l_var) => {
-            level_variables_str += `- ${l_var}\n`
-        })
-        fs.writeFileSync(`${output_path}/level_variables.md`, level_variables_str);
-    }
-
-    // NOTE: This is an example of how the AST could be used to analyze existing GSC scripts by finding all variables attached to the player object.
-    let player_variables: string[] = [];
-    ast.forEach((item) => {
-        switch (item.type) {
-            case "variable_reference":
-            case "variable_assignment":
-                if (item.content && item.content != "undefined" && item.content.substring(0, 7) == "player.") player_variables.push(item.content);
-                break;
-        }
-    })
-
-    if (player_variables.length) {
-        player_variables = [...new Set(player_variables)];
-
-        let player_variables_str = "# Player Variables\n\n";
-        player_variables.forEach((p_var) => {
-            player_variables_str += `- ${p_var}\n`
-        })
-        fs.writeFileSync(`${output_path}/player_variables.md`, player_variables_str);
-    }
-
-    fs.writeFileSync(`${output_path}/output.json`, JSON.stringify(analyze_ast(ast), null, 2));
+    fs.writeFileSync(`${output_path}/output.json`, JSON.stringify(analysis, null, 2));
 })

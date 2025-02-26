@@ -70,7 +70,8 @@ export default function analyze_ast(ast: ASTItem[]): ASTOutput {
                             // NOTE: Example of AST analysis
                             // Check if level variable, if so write to file
                             if (va.name.substring(0, 5) == "level") {
-                                output.level_variables.push(va.name);
+                                // Check if duplicate
+                                if (output.level_variables.indexOf(va.name) == -1) output.level_variables.push(va.name);
                             }
 
                             func_dec.variable_assignments.push(va);
