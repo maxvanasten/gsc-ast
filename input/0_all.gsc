@@ -1,9 +1,3 @@
-//Include external scripts
-#include common_scripts\utility;
-#include maps\mp\gametypes_zm\_hud_util;
-#include maps\mp\zombies\_zm_utility;
-#include some_script;
-
 init() {
     //Set some variables
     player_name = "Max";
@@ -17,4 +11,7 @@ init() {
 greet_player(player_name, player_age) {
     welcome_message = "Welcome, " + player_name + ". You are " + player_age + " years old.";
     print(welcome_message);
+
+		level thread some_function(some_arg1, some_arg2, some_arg3);
+		player thread some_func(arg1);
 }

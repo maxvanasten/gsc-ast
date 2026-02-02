@@ -285,36 +285,6 @@
           ]
         },
         {
-          "name": "undefined",
-          "components": [
-            "equip_dieseldrone_zm"
-          ]
-        },
-        {
-          "name": "undefined",
-          "components": [
-            "staff_fire_zm"
-          ]
-        },
-        {
-          "name": "undefined",
-          "components": [
-            "staff_air_zm"
-          ]
-        },
-        {
-          "name": "undefined",
-          "components": [
-            "staff_lightning_zm"
-          ]
-        },
-        {
-          "name": "undefined",
-          "components": [
-            "staff_water_zm"
-          ]
-        },
-        {
           "name": "level.a_func_vehicle_damage_override",
           "components": [
             "[",
@@ -667,12 +637,6 @@
           ]
         },
         {
-          "name": "undefined",
-          "components": [
-            "zone_start"
-          ]
-        },
-        {
           "name": "level.zombie_ai_limit",
           "components": [
             "24"
@@ -691,7 +655,7 @@
           "arguments": []
         },
         {
-          "name": "levelthreadmaps\\mp\\zm_tomb_ffotd::main_start",
+          "name": "level thread maps\\mp\\zm_tomb_ffotd::main_start",
           "arguments": []
         },
         {
@@ -774,11 +738,11 @@
           ]
         },
         {
-          "name": "levelthreadsetup_tomb_spawn_groups",
+          "name": "level thread setup_tomb_spawn_groups",
           "arguments": []
         },
         {
-          "name": "spawner_main_chamber_capture_zombiesadd_spawn_function",
+          "name": "spawner_main_chamber_capture_zombies add_spawn_function",
           "arguments": [
             "::chamber_capture_zombie_spawn_init"
           ]
@@ -836,7 +800,7 @@
           "arguments": []
         },
         {
-          "name": "levelmaps\\mp\\zm_tomb_achievement::init",
+          "name": "level maps\\mp\\zm_tomb_achievement::init",
           "arguments": []
         },
         {
@@ -848,7 +812,7 @@
         {
           "name": "if",
           "arguments": [
-            "level.splitscreen&&getdvarint",
+            "level.splitscreen && getdvarint",
             "(splitscreen_playerCount)",
             ">",
             "2"
@@ -859,7 +823,7 @@
           "arguments": [
             "isdefined",
             "(level.optimise_for_splitscreen)",
-            "&&level.optimise_for_splitscreen"
+            "&& level.optimise_for_splitscreen"
           ]
         },
         {
@@ -869,7 +833,7 @@
           ]
         },
         {
-          "name": "levelthreadmaps\\mp\\zm_tomb_distance_tracking::zombie_tracking_init",
+          "name": "level thread maps\\mp\\zm_tomb_distance_tracking::zombie_tracking_init",
           "arguments": []
         },
         {
@@ -903,7 +867,7 @@
           "arguments": []
         },
         {
-          "name": "levelthreadmaps\\mp\\_sticky_grenade::init",
+          "name": "level thread maps\\mp\\_sticky_grenade::init",
           "arguments": []
         },
         {
@@ -963,15 +927,15 @@
           "arguments": []
         },
         {
-          "name": "levelthreadmaps\\mp\\zombies\\_zm_ai_mechz::init",
+          "name": "level thread maps\\mp\\zombies\\_zm_ai_mechz::init",
           "arguments": []
         },
         {
-          "name": "levelthreadmaps\\mp\\zombies\\_zm_perk_random::init_animtree",
+          "name": "level thread maps\\mp\\zombies\\_zm_perk_random::init_animtree",
           "arguments": []
         },
         {
-          "name": "levelthreadmaps\\mp\\zombies\\_zm_ai_quadrotor::init",
+          "name": "level thread maps\\mp\\zombies\\_zm_ai_quadrotor::init",
           "arguments": []
         },
         {
@@ -993,27 +957,27 @@
           "arguments": []
         },
         {
-          "name": "levelthreadmaps\\mp\\zm_tomb_main_quest::main_quest_init",
+          "name": "level thread maps\\mp\\zm_tomb_main_quest::main_quest_init",
           "arguments": []
         },
         {
-          "name": "levelthreadmaps\\mp\\zm_tomb_teleporter::teleporter_init",
+          "name": "level thread maps\\mp\\zm_tomb_teleporter::teleporter_init",
           "arguments": []
         },
         {
-          "name": "levelthreadmaps\\mp\\zombies\\_zm_perk_random::start_random_machine",
+          "name": "level thread maps\\mp\\zombies\\_zm_perk_random::start_random_machine",
           "arguments": []
         },
         {
-          "name": "levelthreadmaps\\mp\\zm_tomb_ee_main::init",
+          "name": "level thread maps\\mp\\zm_tomb_ee_main::init",
           "arguments": []
         },
         {
-          "name": "levelthreadmaps\\mp\\zm_tomb_ee_side::init",
+          "name": "level thread maps\\mp\\zm_tomb_ee_side::init",
           "arguments": []
         },
         {
-          "name": "levelthreadmaps\\mp\\zombies\\_zm_zonemgr::manage_zones",
+          "name": "level thread maps\\mp\\zombies\\_zm_zonemgr::manage_zones",
           "arguments": [
             "init_zones"
           ]
@@ -1023,15 +987,15 @@
           "arguments": [
             "isdefined",
             "(level.optimise_for_splitscreen)",
-            "&&level.optimise_for_splitscreen"
+            "&& level.optimise_for_splitscreen"
           ]
         },
         {
-          "name": "levelthreaddrop_all_barriers",
+          "name": "level thread drop_all_barriers",
           "arguments": []
         },
         {
-          "name": "levelthreadtraversal_blocker",
+          "name": "level thread traversal_blocker",
           "arguments": []
         },
         {
@@ -1057,7 +1021,7 @@
           "arguments": []
         },
         {
-          "name": "levelnotify",
+          "name": "level notify",
           "arguments": [
             "specialty_additionalprimaryweapon_power_on"
           ]
@@ -1067,7 +1031,7 @@
           "arguments": []
         },
         {
-          "name": "levelnotify",
+          "name": "level notify",
           "arguments": [
             "additionalprimaryweapon_on"
           ]
@@ -1080,30 +1044,30 @@
           ]
         },
         {
-          "name": "levelcheck_solo_status",
+          "name": "level check_solo_status",
           "arguments": []
         },
         {
-          "name": "levelthreadadjustments_for_solo",
+          "name": "level thread adjustments_for_solo",
           "arguments": []
         },
         {
-          "name": "levelthreadzone_capture_powerup",
+          "name": "level thread zone_capture_powerup",
           "arguments": []
         },
         {
-          "name": "levelthreadclean_up_bunker_doors",
+          "name": "level thread clean_up_bunker_doors",
           "arguments": []
         },
         {
-          "name": "levelsetclientfield",
+          "name": "level setclientfield",
           "arguments": [
             "lantern_fx",
             "1"
           ]
         },
         {
-          "name": "levelthreadmaps\\mp\\zm_tomb_chamber::tomb_watch_chamber_player_activity",
+          "name": "level thread maps\\mp\\zm_tomb_chamber::tomb_watch_chamber_player_activity",
           "arguments": []
         },
         {
@@ -1115,7 +1079,7 @@
           "arguments": []
         },
         {
-          "name": "levelthreadmaps\\mp\\zm_tomb_ffotd::main_end",
+          "name": "level thread maps\\mp\\zm_tomb_ffotd::main_end",
           "arguments": []
         }
       ]
@@ -1700,7 +1664,7 @@
       "variable_assignments": [],
       "function_calls": [
         {
-          "name": "selfthreadrevive_watcher",
+          "name": "self thread revive_watcher",
           "arguments": []
         },
         {
@@ -1708,11 +1672,11 @@
           "arguments": []
         },
         {
-          "name": "selfthreadplayer_slow_movement_speed_monitor",
+          "name": "self thread player_slow_movement_speed_monitor",
           "arguments": []
         },
         {
-          "name": "selfthreadsndmeleewpnsound",
+          "name": "self thread sndmeleewpnsound",
           "arguments": []
         }
       ]
@@ -1784,13 +1748,13 @@
       ],
       "function_calls": [
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "disconnect"
           ]
         },
         {
-          "name": "levelendon",
+          "name": "level endon",
           "arguments": [
             "end_game"
           ]
@@ -1806,60 +1770,60 @@
           "arguments": [
             "isdefined",
             "(self.is_player_zombie)",
-            "&&self.is_player_zombie"
+            "&& self.is_player_zombie"
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "current_melee_weapon"
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "current_melee_weapon"
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "current_melee_weapon"
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "current_melee_weapon"
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "current_melee_weapon"
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "current_melee_weapon"
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "current_melee_weapon"
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "sndmeleewpn_isstaff",
             "(current_melee_weapon)"
           ]
         },
         {
-          "name": "selfplaysoundtoplayer",
+          "name": "self playsoundtoplayer",
           "arguments": [
             "alias",
             "+",
@@ -1879,7 +1843,7 @@
           ]
         },
         {
-          "name": "selfplaysound",
+          "name": "self playsound",
           "arguments": [
             "alias",
             "+",
@@ -1889,7 +1853,7 @@
         {
           "name": "while",
           "arguments": [
-            "selfismeleeing",
+            "self ismeleeing",
             ")"
           ]
         }
@@ -1916,7 +1880,7 @@
       "variable_assignments": [],
       "function_calls": [
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "death_or_disconnect"
           ]
@@ -2056,7 +2020,7 @@
       ],
       "function_calls": [
         {
-          "name": "levelwaittill",
+          "name": "level waittill",
           "arguments": [
             "start_zombie_round_logic"
           ]
@@ -2069,19 +2033,19 @@
       "variable_assignments": [],
       "function_calls": [
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "death"
           ]
         },
         {
-          "name": "selfwaittill",
+          "name": "self waittill",
           "arguments": [
             "completed_emerging_into_playable_area"
           ]
         },
         {
-          "name": "selfsetclientfield",
+          "name": "self setclientfield",
           "arguments": [
             "zone_capture_zombie",
             "1"
@@ -2102,7 +2066,7 @@
       ],
       "function_calls": [
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "death"
           ]
@@ -2126,7 +2090,7 @@
           ]
         },
         {
-          "name": "selfdodamage",
+          "name": "self dodamage",
           "arguments": [
             "self.health",
             "+",
@@ -2145,13 +2109,13 @@
       "variable_assignments": [],
       "function_calls": [
         {
-          "name": "selfgiveweapon",
+          "name": "self giveweapon",
           "arguments": [
             "knife_zm"
           ]
         },
         {
-          "name": "selfgive_start_weapon",
+          "name": "self give_start_weapon",
           "arguments": [
             "1"
           ]
@@ -2282,7 +2246,7 @@
           ]
         },
         {
-          "name": "selfdetachall",
+          "name": "self detachall",
           "arguments": []
         },
         {
@@ -2308,25 +2272,25 @@
           ]
         },
         {
-          "name": "selfsetmovespeedscale",
+          "name": "self setmovespeedscale",
           "arguments": [
             "1"
           ]
         },
         {
-          "name": "selfsetsprintduration",
+          "name": "self setsprintduration",
           "arguments": [
             "4"
           ]
         },
         {
-          "name": "selfsetsprintcooldown",
+          "name": "self setsprintcooldown",
           "arguments": [
             "0"
           ]
         },
         {
-          "name": "selfthreadset_exert_id",
+          "name": "self thread set_exert_id",
           "arguments": []
         }
       ]
@@ -2337,7 +2301,7 @@
       "variable_assignments": [],
       "function_calls": [
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "disconnect"
           ]
@@ -2351,7 +2315,7 @@
           "arguments": []
         },
         {
-          "name": "selfmaps\\mp\\zombies\\_zm_audio::setexertvoice",
+          "name": "self maps\\mp\\zombies\\_zm_audio::setexertvoice",
           "arguments": [
             "self.characterindex",
             "+",
@@ -2369,30 +2333,6 @@
           "components": [
             "[",
             "]"
-          ]
-        },
-        {
-          "name": "undefined",
-          "components": [
-            "0"
-          ]
-        },
-        {
-          "name": "undefined",
-          "components": [
-            "1"
-          ]
-        },
-        {
-          "name": "undefined",
-          "components": [
-            "2"
-          ]
-        },
-        {
-          "name": "undefined",
-          "components": [
-            "3"
           ]
         },
         {
@@ -2417,11 +2357,11 @@
       "variable_assignments": [],
       "function_calls": [
         {
-          "name": "selfdetachall",
+          "name": "self detachall",
           "arguments": []
         },
         {
-          "name": "selfset_player_is_female",
+          "name": "self set_player_is_female",
           "arguments": [
             "0"
           ]
@@ -2441,19 +2381,19 @@
           ]
         },
         {
-          "name": "selfsetmovespeedscale",
+          "name": "self setmovespeedscale",
           "arguments": [
             "1"
           ]
         },
         {
-          "name": "selfsetsprintduration",
+          "name": "self setsprintduration",
           "arguments": [
             "4"
           ]
         },
         {
-          "name": "selfsetsprintcooldown",
+          "name": "self setsprintcooldown",
           "arguments": [
             "0"
           ]
@@ -2496,7 +2436,7 @@
         {
           "name": "stance",
           "components": [
-            "selfgetstance"
+            "self getstance"
           ]
         },
         {
@@ -2508,23 +2448,23 @@
       ],
       "function_calls": [
         {
-          "name": "levelnotify",
+          "name": "level notify",
           "arguments": [
             "fake_death"
           ]
         },
         {
-          "name": "selfnotify",
+          "name": "self notify",
           "arguments": [
             "fake_death"
           ]
         },
         {
-          "name": "selfenableinvulnerability",
+          "name": "self enableinvulnerability",
           "arguments": []
         },
         {
-          "name": "selftakeallweapons",
+          "name": "self takeallweapons",
           "arguments": []
         },
         {
@@ -2532,7 +2472,7 @@
           "arguments": [
             "isdefined",
             "(self.insta_killed)",
-            "&&self.insta_killed"
+            "&& self.insta_killed"
           ]
         }
       ]
@@ -2557,7 +2497,7 @@
         {
           "name": "angles",
           "components": [
-            "selfgetplayerangles"
+            "self getplayerangles"
           ]
         },
         {
@@ -2599,19 +2539,19 @@
       ],
       "function_calls": [
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "disconnect"
           ]
         },
         {
-          "name": "levelendon",
+          "name": "level endon",
           "arguments": [
             "game_module_ended"
           ]
         },
         {
-          "name": "selfghost",
+          "name": "self ghost",
           "arguments": []
         },
         {
@@ -2619,20 +2559,20 @@
           "arguments": [
             "isdefined",
             "(vdir)",
-            "&&length",
+            "&& length",
             "(vdir)",
             ">",
             "0"
           ]
         },
         {
-          "name": "selfplayerlinkto",
+          "name": "self playerlinkto",
           "arguments": [
             "linker"
           ]
         },
         {
-          "name": "selfplaysoundtoplayer",
+          "name": "self playsoundtoplayer",
           "arguments": [
             "zmb_player_death_fall",
             "self"
@@ -2645,7 +2585,7 @@
           ]
         },
         {
-          "name": "selffreezecontrols",
+          "name": "self freezecontrols",
           "arguments": [
             "1"
           ]
@@ -2657,19 +2597,19 @@
           ]
         },
         {
-          "name": "linkerwaittill",
+          "name": "linker waittill",
           "arguments": [
             "movedone"
           ]
         },
         {
-          "name": "selfgiveweapon",
+          "name": "self giveweapon",
           "arguments": [
             "death_throe_zm"
           ]
         },
         {
-          "name": "selfswitchtoweapon",
+          "name": "self switchtoweapon",
           "arguments": [
             "death_throe_zm"
           ]
@@ -2681,7 +2621,7 @@
           ]
         },
         {
-          "name": "linkerdelete",
+          "name": "linker delete",
           "arguments": []
         }
       ]
@@ -2828,7 +2768,7 @@
       "variable_assignments": [],
       "function_calls": [
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "death"
           ]
@@ -2838,12 +2778,12 @@
           "arguments": [
             "is_tactical_grenade",
             "(str_weapon)",
-            "&&isdefined",
-            "(selfget_player_tactical_grenade)"
+            "&& isdefined",
+            "(self get_player_tactical_grenade)"
           ]
         },
         {
-          "name": "selfis_player_tactical_grenade",
+          "name": "self is_player_tactical_grenade",
           "arguments": [
             "str_weapon"
           ]
@@ -2883,9 +2823,9 @@
           "arguments": [
             "isdefined",
             "(e_player.b_already_on_tank)",
-            "&&e_player.b_already_on_tank||isdefined",
+            "&& e_player.b_already_on_tank || isdefined",
             "(self.b_already_on_tank)",
-            "&&self.b_already_on_tank"
+            "&& self.b_already_on_tank"
           ]
         },
         {
@@ -2893,9 +2833,9 @@
           "arguments": [
             "isdefined",
             "(e_player.giant_robot_transition)",
-            "&&e_player.giant_robot_transition||isdefined",
+            "&& e_player.giant_robot_transition || isdefined",
             "(self.giant_robot_transition)",
-            "&&self.giant_robot_transition"
+            "&& self.giant_robot_transition"
           ]
         }
       ]
@@ -2906,7 +2846,7 @@
       "variable_assignments": [],
       "function_calls": [
         {
-          "name": "selfmaps\\mp\\zm_tomb_achievement::init_player_achievement_stats",
+          "name": "self maps\\mp\\zm_tomb_achievement::init_player_achievement_stats",
           "arguments": []
         }
       ]
@@ -3393,7 +3333,7 @@
           "arguments": [
             "isdefined",
             "(level.raygun2_included)",
-            "&&level.raygun2_included"
+            "&& level.raygun2_included"
           ]
         },
         {
@@ -4239,7 +4179,7 @@
           "arguments": [
             "isdefined",
             "(level.raygun2_included)",
-            "&&level.raygun2_included"
+            "&& level.raygun2_included"
           ]
         }
       ]
@@ -4426,7 +4366,7 @@
           ]
         },
         {
-          "name": "levelthreadmaps\\mp\\zombies\\_zm_powerup_zombie_blood::zombie_blood_powerup",
+          "name": "level thread maps\\mp\\zombies\\_zm_powerup_zombie_blood::zombie_blood_powerup",
           "arguments": [
             "s_powerup",
             "e_player"
@@ -4452,18 +4392,18 @@
             "devgui_cmd \\",
             "Zombies:2",
             "/",
-            "PowerUps:2",
+            "Power Ups:2",
             "/",
             "Now:1",
             "/",
-            "DropZombieBlood:1\\",
+            "Drop Zombie Blood:1\\",
             " \\",
-            "zombie_bloodon\\",
+            "zombie_blood on\\",
             "\\n"
           ]
         },
         {
-          "name": "levelthreadwatch_devgui_zombie_blood",
+          "name": "level thread watch_devgui_zombie_blood",
           "arguments": []
         }
       ]
@@ -4492,7 +4432,7 @@
             "/",
             "OneInchPunch:1\\",
             " \\",
-            "test_oneinchpunchon\\",
+            "test_oneinchpunch on\\",
             "\\n"
           ]
         },
@@ -4515,7 +4455,7 @@
             "/",
             "OneInchPunch_Upgraded:1\\",
             " \\",
-            "test_oneinchpunch_upgradedon\\",
+            "test_oneinchpunch_upgraded on\\",
             "\\n"
           ]
         },
@@ -4538,7 +4478,7 @@
             "/",
             "OneInchPunch_Air:1\\",
             " \\",
-            "test_oneinchpunch_airon\\",
+            "test_oneinchpunch_air on\\",
             "\\n"
           ]
         },
@@ -4561,7 +4501,7 @@
             "/",
             "OneInchPunch_Fire:1\\",
             " \\",
-            "test_oneinchpunch_fireon\\",
+            "test_oneinchpunch_fire on\\",
             "\\n"
           ]
         },
@@ -4584,7 +4524,7 @@
             "/",
             "OneInchPunch_Ice:1\\",
             " \\",
-            "test_oneinchpunch_iceon\\",
+            "test_oneinchpunch_ice on\\",
             "\\n"
           ]
         },
@@ -4607,12 +4547,12 @@
             "/",
             "OneInchPunch_Lightning:1\\",
             " \\",
-            "test_oneinchpunch_lightningon\\",
+            "test_oneinchpunch_lightning on\\",
             "\\n"
           ]
         },
         {
-          "name": "levelthreadwatch_devgui_oneinchpunch",
+          "name": "level thread watch_devgui_oneinchpunch",
           "arguments": []
         }
       ]
@@ -4629,35 +4569,35 @@
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "getdvar",
             "(test_oneinchpunch_upgraded)"
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "getdvar",
             "(test_oneinchpunch_air)"
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "getdvar",
             "(test_oneinchpunch_fire)"
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "getdvar",
             "(test_oneinchpunch_ice)"
           ]
         },
         {
-          "name": "elseif",
+          "name": "else if",
           "arguments": [
             "getdvar",
             "(test_oneinchpunch_lightning)"
@@ -4685,13 +4625,13 @@
             "/",
             "Tomb:1",
             "/",
-            "EasterAnn:3",
+            "Easter Ann:3",
             "/",
             "Tablet",
             "-",
             "None:1\\",
             " \\",
-            "test_player_tablet0\\",
+            "test_player_tablet 0\\",
             "\\n"
           ]
         },
@@ -4703,13 +4643,13 @@
             "/",
             "Tomb:1",
             "/",
-            "EasterAnn:3",
+            "Easter Ann:3",
             "/",
             "Tablet",
             "-",
             "Clean:1\\",
             " \\",
-            "test_player_tablet1\\",
+            "test_player_tablet 1\\",
             "\\n"
           ]
         },
@@ -4721,18 +4661,18 @@
             "/",
             "Tomb:1",
             "/",
-            "EasterAnn:3",
+            "Easter Ann:3",
             "/",
             "Tablet",
             "-",
             "Dirty:1\\",
             " \\",
-            "test_player_tablet2\\",
+            "test_player_tablet 2\\",
             "\\n"
           ]
         },
         {
-          "name": "levelthreadwatch_devgui_tablet",
+          "name": "level thread watch_devgui_tablet",
           "arguments": []
         }
       ]
@@ -6041,28 +5981,28 @@
           ]
         },
         {
-          "name": "levelthreadactivate_zone_trig",
+          "name": "level thread activate_zone_trig",
           "arguments": [
             "trig_zone_bunker_1",
             "activate_zone_bunker_1_tank"
           ]
         },
         {
-          "name": "levelthreadactivate_zone_trig",
+          "name": "level thread activate_zone_trig",
           "arguments": [
             "trig_zone_bunker_2",
             "activate_zone_bunker_2_tank"
           ]
         },
         {
-          "name": "levelthreadactivate_zone_trig",
+          "name": "level thread activate_zone_trig",
           "arguments": [
             "trig_zone_bunker_4",
             "activate_zone_bunker_4_tank"
           ]
         },
         {
-          "name": "levelthreadactivate_zone_trig",
+          "name": "level thread activate_zone_trig",
           "arguments": [
             "trig_zone_bunker_6",
             "activate_zone_bunker_6_tank",
@@ -6152,7 +6092,7 @@
       ],
       "function_calls": [
         {
-          "name": "trigwaittill",
+          "name": "trig waittill",
           "arguments": [
             "trigger"
           ]
@@ -6184,7 +6124,7 @@
           ]
         },
         {
-          "name": "trigdelete",
+          "name": "trig delete",
           "arguments": []
         }
       ]
@@ -6302,7 +6242,7 @@
           "arguments": [
             "isdefined",
             "(level.raygun2_included)",
-            "&&level.raygun2_included"
+            "&& level.raygun2_included"
           ]
         },
         {
@@ -6350,7 +6290,7 @@
           "arguments": [
             "isdefined",
             "(self.b_zombie_blood_damage_only)",
-            "&&self.b_zombie_blood_damage_only"
+            "&& self.b_zombie_blood_damage_only"
           ]
         },
         {
@@ -6358,7 +6298,7 @@
           "arguments": [
             "isdefined",
             "(self.script_noteworthy)",
-            "&&self.script_noteworthy"
+            "&& self.script_noteworthy"
           ]
         }
       ]
@@ -6373,15 +6313,15 @@
           "arguments": [
             "isdefined",
             "(self)",
-            "&&isdefined",
+            "&& isdefined",
             "(self.damagelocation)",
-            "&&isdefined",
+            "&& isdefined",
             "(self.damagemod)",
-            "&&isdefined",
+            "&& isdefined",
             "(self.damageweapon)",
-            "&&isdefined",
+            "&& isdefined",
             "(self.attacker)",
-            "&&isplayer",
+            "&& isplayer",
             "(self.attacker)"
           ]
         }
@@ -6400,7 +6340,7 @@
       ],
       "function_calls": [
         {
-          "name": "selfthreadmaps\\mp\\zm_tomb_distance_tracking::escaped_zombies_cleanup_init",
+          "name": "self thread maps\\mp\\zm_tomb_distance_tracking::escaped_zombies_cleanup_init",
           "arguments": []
         }
       ]
@@ -6441,7 +6381,7 @@
       "variable_assignments": [],
       "function_calls": [
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "death_or_disconnect"
           ]
@@ -6501,11 +6441,11 @@
           "arguments": [
             "isdefined",
             "(level.flopper_network_optimized)",
-            "&&level.flopper_network_optimized"
+            "&& level.flopper_network_optimized"
           ]
         },
         {
-          "name": "attackerthreadtomb_custom_divetonuke_explode_network_optimized",
+          "name": "attacker thread tomb_custom_divetonuke_explode_network_optimized",
           "arguments": [
             "origin",
             "radius",
@@ -6536,7 +6476,7 @@
           ]
         },
         {
-          "name": "attackerplaysound",
+          "name": "attacker playsound",
           "arguments": [
             "zmb_phdflop_explo"
           ]
@@ -6590,7 +6530,7 @@
       ],
       "function_calls": [
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "disconnect"
           ]
@@ -6673,19 +6613,19 @@
       ],
       "function_calls": [
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "death"
           ]
         },
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "disconnect"
           ]
         },
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "stop_electric_cherry_reload_attack"
           ]
@@ -6697,7 +6637,7 @@
           ]
         },
         {
-          "name": "selfthreadmaps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_cooldown_timer",
+          "name": "self thread maps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_cooldown_timer",
           "arguments": [
             "str_current_weapon"
           ]
@@ -6707,23 +6647,23 @@
           "arguments": [
             "isdefined",
             "(n_zombie_limit)",
-            "&&n_zombie_limit"
+            "&& n_zombie_limit"
           ]
         },
         {
-          "name": "selfthreadelectric_cherry_reload_fx",
+          "name": "self thread electric_cherry_reload_fx",
           "arguments": [
             "n_fraction"
           ]
         },
         {
-          "name": "selfnotify",
+          "name": "self notify",
           "arguments": [
             "electric_cherry_start"
           ]
         },
         {
-          "name": "selfplaysound",
+          "name": "self playsound",
           "arguments": [
             "zmb_cherry_explode"
           ]
@@ -6791,19 +6731,19 @@
       ],
       "function_calls": [
         {
-          "name": "selfnotify",
+          "name": "self notify",
           "arguments": [
             "stop_ammo_tracking"
           ]
         },
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "disconnect"
           ]
         },
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "stop_ammo_tracking"
           ]
@@ -6817,7 +6757,7 @@
         {
           "name": "if",
           "arguments": [
-            "selfgetammocount",
+            "self getammocount",
             "(weap)",
             ">",
             "0"

@@ -2,6 +2,7 @@
   {
     "type": "function_declaration",
     "content": "init",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -41,7 +42,6 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   }
 ]

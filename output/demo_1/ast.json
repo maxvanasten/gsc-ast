@@ -14,18 +14,19 @@
   {
     "type": "function_declaration",
     "content": "init",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "levelthreadonPlayerConnect",
+        "content": "level thread onPlayerConnect",
         "arguments": []
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "onPlayerConnect",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -46,7 +47,7 @@
         "children": [
           {
             "type": "function_call",
-            "content": "levelwaittill",
+            "content": "level waittill",
             "arguments": [
               {
                 "type": "string",
@@ -64,7 +65,7 @@
           },
           {
             "type": "function_call",
-            "content": "playerthreadonPlayerSpawned",
+            "content": "player thread onPlayerSpawned",
             "arguments": []
           },
           {
@@ -78,16 +79,16 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "onPlayerSpawned",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -107,7 +108,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfthreadttg_init",
+        "content": "self thread ttg_init",
         "arguments": []
       },
       {
@@ -129,7 +130,7 @@
         "children": [
           {
             "type": "function_call",
-            "content": "selfthreadttg_update",
+            "content": "self thread ttg_update",
             "arguments": []
           },
           {
@@ -138,7 +139,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "wait0.05"
+            "content": "wait 0.05"
           },
           {
             "type": "unhandled_token",
@@ -151,16 +152,16 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "ttg_init",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfiPrintLn",
+        "content": "self iPrintLn",
         "arguments": [
           {
             "type": "string",
@@ -190,7 +191,7 @@
       },
       {
         "type": "function_call",
-        "content": "self.gpp_ui_health_countersetPoint",
+        "content": "self.gpp_ui_health_counter setPoint",
         "arguments": [
           {
             "type": "string",
@@ -266,7 +267,7 @@
       },
       {
         "type": "function_call",
-        "content": "self.gpp_ui_health_countersetValue",
+        "content": "self.gpp_ui_health_counter setValue",
         "arguments": [
           {
             "type": "number",
@@ -320,7 +321,7 @@
       },
       {
         "type": "function_call",
-        "content": "self.gpp_ui_zombie_countersetPoint",
+        "content": "self.gpp_ui_zombie_counter setPoint",
         "arguments": [
           {
             "type": "string",
@@ -396,7 +397,7 @@
       },
       {
         "type": "function_call",
-        "content": "self.gpp_ui_zombie_countersetValue",
+        "content": "self.gpp_ui_zombie_counter setValue",
         "arguments": [
           {
             "type": "number",
@@ -428,16 +429,16 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "ttg_update",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfthreadupdate_hud_health_counter",
+        "content": "self thread update_hud_health_counter",
         "arguments": []
       },
       {
@@ -461,15 +462,15 @@
       },
       {
         "type": "function_call",
-        "content": "selfthreadupdate_hud_zombie_counter",
+        "content": "self thread update_hud_zombie_counter",
         "arguments": []
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "update_hud_health_counter",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -494,7 +495,7 @@
         "children": [
           {
             "type": "function_call",
-            "content": "self.gpp_ui_health_countersetValue",
+            "content": "self.gpp_ui_health_counter setValue",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -521,14 +522,14 @@
       },
       {
         "type": "variable_reference",
-        "content": "wait0.5"
+        "content": "wait 0.5"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "update_hud_zombie_counter",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -553,7 +554,7 @@
         "children": [
           {
             "type": "function_call",
-            "content": "self.gpp_ui_zombie_countersetValue",
+            "content": "self.gpp_ui_zombie_counter setValue",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -580,9 +581,8 @@
       },
       {
         "type": "variable_reference",
-        "content": "wait0.5"
+        "content": "wait 0.5"
       }
-    ],
-    "arguments": []
+    ]
   }
 ]

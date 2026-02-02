@@ -11,7 +11,7 @@
       "variable_assignments": [],
       "function_calls": [
         {
-          "name": "levelthreadonPlayerConnect",
+          "name": "level thread onPlayerConnect",
           "arguments": []
         }
       ]
@@ -36,7 +36,7 @@
       "variable_assignments": [],
       "function_calls": [
         {
-          "name": "selfendon",
+          "name": "self endon",
           "arguments": [
             "disconnect"
           ]
@@ -48,7 +48,7 @@
           ]
         },
         {
-          "name": "selfthreadttg_init",
+          "name": "self thread ttg_init",
           "arguments": []
         },
         {
@@ -149,13 +149,13 @@
       ],
       "function_calls": [
         {
-          "name": "selfiPrintLn",
+          "name": "self iPrintLn",
           "arguments": [
             "[^2health-and-zombie-counter^7] This script was made using ts_gsc, the TypeScript to GSC transpiler! (^5https://github.com/maxvanasten/ts_gsc^7)"
           ]
         },
         {
-          "name": "self.gpp_ui_health_countersetPoint",
+          "name": "self.gpp_ui_health_counter setPoint",
           "arguments": [
             "CENTER",
             "CENTER",
@@ -164,13 +164,13 @@
           ]
         },
         {
-          "name": "self.gpp_ui_health_countersetValue",
+          "name": "self.gpp_ui_health_counter setValue",
           "arguments": [
             "0"
           ]
         },
         {
-          "name": "self.gpp_ui_zombie_countersetPoint",
+          "name": "self.gpp_ui_zombie_counter setPoint",
           "arguments": [
             "CENTER",
             "CENTER",
@@ -179,7 +179,7 @@
           ]
         },
         {
-          "name": "self.gpp_ui_zombie_countersetValue",
+          "name": "self.gpp_ui_zombie_counter setValue",
           "arguments": [
             "0"
           ]
@@ -201,11 +201,11 @@
       ],
       "function_calls": [
         {
-          "name": "selfthreadupdate_hud_health_counter",
+          "name": "self thread update_hud_health_counter",
           "arguments": []
         },
         {
-          "name": "selfthreadupdate_hud_zombie_counter",
+          "name": "self thread update_hud_zombie_counter",
           "arguments": []
         }
       ]

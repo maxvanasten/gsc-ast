@@ -2,6 +2,7 @@
   {
     "type": "function_declaration",
     "content": "init",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -13,12 +14,21 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "function_with_args",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "arg1"
+      },
+      {
+        "type": "variable_reference",
+        "content": "arg2"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
@@ -53,16 +63,6 @@
             "content": "arg2"
           }
         ]
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "arg1"
-      },
-      {
-        "type": "variable_reference",
-        "content": "arg2"
       }
     ]
   }

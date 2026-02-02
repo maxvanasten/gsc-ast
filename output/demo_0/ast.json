@@ -250,18 +250,19 @@
   {
     "type": "function_declaration",
     "content": "gamemode_callback_setup",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
         "content": "maps\\mp\\zm_tomb_gamemodes::init",
         "arguments": []
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "survival_init",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -351,18 +352,18 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "zstandard_preinit",
-    "children": [],
-    "arguments": []
+    "arguments": [],
+    "children": []
   },
   {
     "type": "function_declaration",
     "content": "createfx_callback",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -488,12 +489,12 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "main",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -532,7 +533,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zm_tomb_ffotd::main_start",
+        "content": "level thread maps\\mp\\zm_tomb_ffotd::main_start",
         "arguments": []
       },
       {
@@ -782,7 +783,7 @@
       },
       {
         "type": "variable_assignment",
-        "content": "undefined",
+        "content": "",
         "children": [
           {
             "type": "string",
@@ -808,7 +809,7 @@
       },
       {
         "type": "variable_assignment",
-        "content": "undefined",
+        "content": "",
         "children": [
           {
             "type": "string",
@@ -834,7 +835,7 @@
       },
       {
         "type": "variable_assignment",
-        "content": "undefined",
+        "content": "",
         "children": [
           {
             "type": "string",
@@ -860,7 +861,7 @@
       },
       {
         "type": "variable_assignment",
-        "content": "undefined",
+        "content": "",
         "children": [
           {
             "type": "string",
@@ -886,7 +887,7 @@
       },
       {
         "type": "variable_assignment",
-        "content": "undefined",
+        "content": "",
         "children": [
           {
             "type": "string",
@@ -1002,7 +1003,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadsetup_tomb_spawn_groups",
+        "content": "level thread setup_tomb_spawn_groups",
         "arguments": []
       },
       {
@@ -1027,7 +1028,7 @@
       },
       {
         "type": "function_call",
-        "content": "spawner_main_chamber_capture_zombiesadd_spawn_function",
+        "content": "spawner_main_chamber_capture_zombies add_spawn_function",
         "arguments": [
           {
             "type": "variable_reference",
@@ -1485,7 +1486,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelmaps\\mp\\zm_tomb_achievement::init",
+        "content": "level maps\\mp\\zm_tomb_achievement::init",
         "arguments": []
       },
       {
@@ -1504,7 +1505,7 @@
         "arguments": [
           {
             "type": "variable_reference",
-            "content": "level.splitscreen&&getdvarint"
+            "content": "level.splitscreen && getdvarint"
           },
           {
             "type": "scope",
@@ -1570,7 +1571,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&level.optimise_for_splitscreen"
+            "content": "&& level.optimise_for_splitscreen"
           }
         ]
       },
@@ -1610,7 +1611,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zm_tomb_distance_tracking::zombie_tracking_init",
+        "content": "level thread maps\\mp\\zm_tomb_distance_tracking::zombie_tracking_init",
         "arguments": []
       },
       {
@@ -1695,7 +1696,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\_sticky_grenade::init",
+        "content": "level thread maps\\mp\\_sticky_grenade::init",
         "arguments": []
       },
       {
@@ -1814,17 +1815,17 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zombies\\_zm_ai_mechz::init",
+        "content": "level thread maps\\mp\\zombies\\_zm_ai_mechz::init",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zombies\\_zm_perk_random::init_animtree",
+        "content": "level thread maps\\mp\\zombies\\_zm_perk_random::init_animtree",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zombies\\_zm_ai_quadrotor::init",
+        "content": "level thread maps\\mp\\zombies\\_zm_ai_quadrotor::init",
         "arguments": []
       },
       {
@@ -1892,17 +1893,17 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zm_tomb_main_quest::main_quest_init",
+        "content": "level thread maps\\mp\\zm_tomb_main_quest::main_quest_init",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zm_tomb_teleporter::teleporter_init",
+        "content": "level thread maps\\mp\\zm_tomb_teleporter::teleporter_init",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zombies\\_zm_perk_random::start_random_machine",
+        "content": "level thread maps\\mp\\zombies\\_zm_perk_random::start_random_machine",
         "arguments": []
       },
       {
@@ -1927,12 +1928,12 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zm_tomb_ee_main::init",
+        "content": "level thread maps\\mp\\zm_tomb_ee_main::init",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zm_tomb_ee_side::init",
+        "content": "level thread maps\\mp\\zm_tomb_ee_side::init",
         "arguments": []
       },
       {
@@ -1977,7 +1978,7 @@
       },
       {
         "type": "variable_assignment",
-        "content": "undefined",
+        "content": "",
         "children": [
           {
             "type": "string",
@@ -1987,7 +1988,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zombies\\_zm_zonemgr::manage_zones",
+        "content": "level thread maps\\mp\\zombies\\_zm_zonemgr::manage_zones",
         "arguments": [
           {
             "type": "variable_reference",
@@ -2015,7 +2016,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&level.optimise_for_splitscreen"
+            "content": "&& level.optimise_for_splitscreen"
           }
         ]
       },
@@ -2142,12 +2143,12 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreaddrop_all_barriers",
+        "content": "level thread drop_all_barriers",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "levelthreadtraversal_blocker",
+        "content": "level thread traversal_blocker",
         "arguments": []
       },
       {
@@ -2197,7 +2198,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelnotify",
+        "content": "level notify",
         "arguments": [
           {
             "type": "string",
@@ -2212,7 +2213,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelnotify",
+        "content": "level notify",
         "arguments": [
           {
             "type": "string",
@@ -2236,27 +2237,27 @@
       },
       {
         "type": "function_call",
-        "content": "levelcheck_solo_status",
+        "content": "level check_solo_status",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "levelthreadadjustments_for_solo",
+        "content": "level thread adjustments_for_solo",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "levelthreadzone_capture_powerup",
+        "content": "level thread zone_capture_powerup",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "levelthreadclean_up_bunker_doors",
+        "content": "level thread clean_up_bunker_doors",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "levelsetclientfield",
+        "content": "level setclientfield",
         "arguments": [
           {
             "type": "string",
@@ -2270,7 +2271,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zm_tomb_chamber::tomb_watch_chamber_player_activity",
+        "content": "level thread maps\\mp\\zm_tomb_chamber::tomb_watch_chamber_player_activity",
         "arguments": []
       },
       {
@@ -2293,15 +2294,15 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zm_tomb_ffotd::main_end",
+        "content": "level thread maps\\mp\\zm_tomb_ffotd::main_end",
         "arguments": []
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_register_client_fields",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -2985,12 +2986,12 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "register_burn_overlay",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -3074,12 +3075,21 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_closest_player_override",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "v_zombie_origin"
+      },
+      {
+        "type": "variable_reference",
+        "content": "a_players_to_check"
+      }
+    ],
     "children": [
       {
         "type": "variable_assignment",
@@ -3202,7 +3212,7 @@
             "arguments": [
               {
                 "type": "variable_reference",
-                "content": "e_playerina_players"
+                "content": "e_player in a_players"
               }
             ]
           },
@@ -3278,16 +3288,6 @@
           }
         ],
         "content": "{}"
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "v_zombie_origin"
-      },
-      {
-        "type": "variable_reference",
-        "content": "a_players_to_check"
       }
     ]
   },
@@ -3365,7 +3365,7 @@
   },
   {
     "type": "function_call",
-    "content": "elseif",
+    "content": "else if",
     "arguments": [
       {
         "type": "variable_reference",
@@ -3399,7 +3399,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "wait0.5"
+    "content": "wait 0.5"
   },
   {
     "type": "unhandled_token",
@@ -3407,7 +3407,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "returne_player_to_attack"
+    "content": "return e_player_to_attack"
   },
   {
     "type": "unhandled_token",
@@ -3416,6 +3416,7 @@
   {
     "type": "function_declaration",
     "content": "zm_tomb_get_round_enemy_array",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -3548,7 +3549,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "&&enemies"
+                "content": "&& enemies"
               },
               {
                 "type": "unhandled_token",
@@ -3564,7 +3565,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": ".ignore_enemy_count&&"
+                "content": ".ignore_enemy_count &&"
               },
               {
                 "type": "scope",
@@ -3582,7 +3583,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "||enemies"
+                "content": "|| enemies"
               },
               {
                 "type": "unhandled_token",
@@ -3640,7 +3641,7 @@
           },
           {
             "type": "variable_assignment",
-            "content": "undefined",
+            "content": "",
             "children": [
               {
                 "type": "variable_reference",
@@ -3669,14 +3670,67 @@
       },
       {
         "type": "variable_reference",
-        "content": "returnvalid_enemies"
+        "content": "return valid_enemies"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_player_damage_callback",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "e_inflictor"
+      },
+      {
+        "type": "variable_reference",
+        "content": "e_attacker"
+      },
+      {
+        "type": "variable_reference",
+        "content": "n_damage"
+      },
+      {
+        "type": "variable_reference",
+        "content": "n_dflags"
+      },
+      {
+        "type": "variable_reference",
+        "content": "str_means_of_death"
+      },
+      {
+        "type": "variable_reference",
+        "content": "str_weapon"
+      },
+      {
+        "type": "variable_reference",
+        "content": "v_point"
+      },
+      {
+        "type": "variable_reference",
+        "content": "v_dir"
+      },
+      {
+        "type": "variable_reference",
+        "content": "str_hit_loc"
+      },
+      {
+        "type": "variable_reference",
+        "content": "psoffsettime"
+      },
+      {
+        "type": "variable_reference",
+        "content": "b_damage_from_underneath"
+      },
+      {
+        "type": "variable_reference",
+        "content": "n_model_index"
+      },
+      {
+        "type": "variable_reference",
+        "content": "str_part_name"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
@@ -3731,7 +3785,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "return0"
+            "content": "return 0"
           },
           {
             "type": "unhandled_token",
@@ -3739,7 +3793,7 @@
           },
           {
             "type": "function_call",
-            "content": "elseif",
+            "content": "else if",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -3749,7 +3803,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "return0"
+            "content": "return 0"
           },
           {
             "type": "unhandled_token",
@@ -3757,7 +3811,7 @@
           },
           {
             "type": "function_call",
-            "content": "elseif",
+            "content": "else if",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -3767,7 +3821,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "return0"
+            "content": "return 0"
           },
           {
             "type": "unhandled_token",
@@ -3775,7 +3829,7 @@
           },
           {
             "type": "function_call",
-            "content": "elseif",
+            "content": "else if",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -3785,7 +3839,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "return0"
+            "content": "return 0"
           },
           {
             "type": "unhandled_token",
@@ -3793,7 +3847,7 @@
           },
           {
             "type": "function_call",
-            "content": "elseif",
+            "content": "else if",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -3803,7 +3857,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "return0"
+            "content": "return 0"
           },
           {
             "type": "unhandled_token",
@@ -3811,7 +3865,7 @@
           },
           {
             "type": "function_call",
-            "content": "elseif",
+            "content": "else if",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -3821,7 +3875,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "return0"
+            "content": "return 0"
           },
           {
             "type": "unhandled_token",
@@ -3836,67 +3890,14 @@
       },
       {
         "type": "variable_reference",
-        "content": "returnn_damage"
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "e_inflictor"
-      },
-      {
-        "type": "variable_reference",
-        "content": "e_attacker"
-      },
-      {
-        "type": "variable_reference",
-        "content": "n_damage"
-      },
-      {
-        "type": "variable_reference",
-        "content": "n_dflags"
-      },
-      {
-        "type": "variable_reference",
-        "content": "str_means_of_death"
-      },
-      {
-        "type": "variable_reference",
-        "content": "str_weapon"
-      },
-      {
-        "type": "variable_reference",
-        "content": "v_point"
-      },
-      {
-        "type": "variable_reference",
-        "content": "v_dir"
-      },
-      {
-        "type": "variable_reference",
-        "content": "str_hit_loc"
-      },
-      {
-        "type": "variable_reference",
-        "content": "psoffsettime"
-      },
-      {
-        "type": "variable_reference",
-        "content": "b_damage_from_underneath"
-      },
-      {
-        "type": "variable_reference",
-        "content": "n_model_index"
-      },
-      {
-        "type": "variable_reference",
-        "content": "str_part_name"
+        "content": "return n_damage"
       }
     ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_random_perk_weights",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -4180,14 +4181,14 @@
       },
       {
         "type": "variable_reference",
-        "content": "returnkeys"
+        "content": "return keys"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "level_precache",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -4269,16 +4270,16 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "on_player_connect",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfthreadrevive_watcher",
+        "content": "self thread revive_watcher",
         "arguments": []
       },
       {
@@ -4288,24 +4289,24 @@
       },
       {
         "type": "function_call",
-        "content": "selfthreadplayer_slow_movement_speed_monitor",
+        "content": "self thread player_slow_movement_speed_monitor",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "selfthreadsndmeleewpnsound",
+        "content": "self thread sndmeleewpnsound",
         "arguments": []
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "sndmeleewpnsound",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -4315,7 +4316,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelendon",
+        "content": "level endon",
         "arguments": [
           {
             "type": "string",
@@ -4346,7 +4347,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "selfismeleeing"
+                "content": "self ismeleeing"
               },
               {
                 "type": "scope",
@@ -4357,7 +4358,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "wait0.05"
+            "content": "wait 0.05"
           },
           {
             "type": "unhandled_token",
@@ -4369,7 +4370,7 @@
             "children": [
               {
                 "type": "function_call",
-                "content": "selfget_player_melee_weapon",
+                "content": "self get_player_melee_weapon",
                 "arguments": []
               }
             ]
@@ -4380,7 +4381,7 @@
             "children": [
               {
                 "type": "function_call",
-                "content": "selfgetcurrentweapon",
+                "content": "self getcurrentweapon",
                 "arguments": []
               }
             ]
@@ -4401,7 +4402,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfplaysound",
+            "content": "self playsound",
             "arguments": [
               {
                 "type": "string",
@@ -4419,7 +4420,7 @@
             "arguments": [
               {
                 "type": "variable_reference",
-                "content": "selfismeleeing"
+                "content": "self ismeleeing"
               },
               {
                 "type": "scope",
@@ -4430,7 +4431,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "wait0.05"
+            "content": "wait 0.05"
           },
           {
             "type": "unhandled_token",
@@ -4481,7 +4482,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&self.is_player_zombie"
+            "content": "&& self.is_player_zombie"
           }
         ]
       },
@@ -4497,7 +4498,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -4517,7 +4518,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -4537,7 +4538,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -4557,7 +4558,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -4577,7 +4578,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -4597,7 +4598,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -4617,7 +4618,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -4637,7 +4638,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -4667,7 +4668,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfplaysoundtoplayer",
+        "content": "self playsoundtoplayer",
         "arguments": [
           {
             "type": "variable_reference",
@@ -4709,7 +4710,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfplaysound",
+        "content": "self playsound",
         "arguments": [
           {
             "type": "variable_reference",
@@ -4731,7 +4732,7 @@
         "arguments": [
           {
             "type": "variable_reference",
-            "content": "selfismeleeing"
+            "content": "self ismeleeing"
           },
           {
             "type": "scope",
@@ -4742,14 +4743,13 @@
       },
       {
         "type": "variable_reference",
-        "content": "wait0.05"
+        "content": "wait 0.05"
       },
       {
         "type": "variable_reference",
-        "content": "wait0.05"
+        "content": "wait 0.05"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "unhandled_token",
@@ -4758,6 +4758,12 @@
   {
     "type": "function_declaration",
     "content": "sndmeleewpn_isstaff",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "weapon"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
@@ -4873,23 +4879,18 @@
       },
       {
         "type": "variable_reference",
-        "content": "returnisstaff"
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "weapon"
+        "content": "return isstaff"
       }
     ]
   },
   {
     "type": "function_declaration",
     "content": "revive_watcher",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -4912,7 +4913,7 @@
         "children": [
           {
             "type": "function_call",
-            "content": "selfwaittill",
+            "content": "self waittill",
             "arguments": [
               {
                 "type": "string",
@@ -4930,7 +4931,7 @@
             "arguments": [
               {
                 "type": "variable_reference",
-                "content": "selfhasperk"
+                "content": "self hasperk"
               },
               {
                 "type": "scope",
@@ -4946,7 +4947,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfnotify",
+            "content": "self notify",
             "arguments": [
               {
                 "type": "string",
@@ -4964,7 +4965,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfnotify",
+            "content": "self notify",
             "arguments": [
               {
                 "type": "string",
@@ -4983,12 +4984,12 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "setup_tomb_spawn_groups",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -5012,7 +5013,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelwaittill",
+        "content": "level waittill",
         "arguments": [
           {
             "type": "string",
@@ -5488,16 +5489,16 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "chamber_capture_zombie_spawn_init",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -5507,7 +5508,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfwaittill",
+        "content": "self waittill",
         "arguments": [
           {
             "type": "string",
@@ -5517,7 +5518,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfsetclientfield",
+        "content": "self setclientfield",
         "arguments": [
           {
             "type": "string",
@@ -5529,16 +5530,16 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_round_spawn_failsafe",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -5589,7 +5590,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "&&self.ignore_round_spawn_failsafe"
+                "content": "&& self.ignore_round_spawn_failsafe"
               }
             ]
           },
@@ -5603,7 +5604,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "wait15"
+            "content": "wait 15"
           },
           {
             "type": "unhandled_token",
@@ -5629,7 +5630,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "&&self.is_inert"
+                "content": "&& self.is_inert"
               }
             ]
           },
@@ -5768,7 +5769,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "&&level.put_timed_out_zombies_back_in_queue&&"
+                "content": "&& level.put_timed_out_zombies_back_in_queue &&"
               },
               {
                 "type": "unhandled_token",
@@ -5808,7 +5809,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "&&self.isscreecher"
+                "content": "&& self.isscreecher"
               }
             ]
           },
@@ -5861,7 +5862,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfdodamage",
+        "content": "self dodamage",
         "arguments": [
           {
             "type": "variable_reference",
@@ -5907,8 +5908,7 @@
         "type": "variable_reference",
         "content": "break"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_call",
@@ -5966,7 +5966,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.put_timed_out_zombies_back_in_queue&&"
+        "content": "&& level.put_timed_out_zombies_back_in_queue &&"
       },
       {
         "type": "unhandled_token",
@@ -5998,7 +5998,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "self.ignoreall&&"
+        "content": "self.ignoreall &&"
       },
       {
         "type": "unhandled_token",
@@ -6016,7 +6016,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&self.nuked"
+        "content": "&& self.nuked"
       }
     ]
   },
@@ -6040,7 +6040,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "&&self.marked_for_death"
+    "content": "&& self.marked_for_death"
   },
   {
     "type": "unhandled_token",
@@ -6066,7 +6066,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "&&self.isscreecher"
+    "content": "&& self.isscreecher"
   },
   {
     "type": "unhandled_token",
@@ -6092,7 +6092,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&self.has_legs"
+        "content": "&& self.has_legs"
       }
     ]
   },
@@ -6116,7 +6116,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "&&self.is_brutus"
+    "content": "&& self.is_brutus"
   },
   {
     "type": "unhandled_token",
@@ -6172,7 +6172,7 @@
   },
   {
     "type": "function_call",
-    "content": "selfdodamage",
+    "content": "self dodamage",
     "arguments": [
       {
         "type": "variable_reference",
@@ -6243,28 +6243,6 @@
   {
     "type": "function_declaration",
     "content": "givecustomloadout",
-    "children": [
-      {
-        "type": "function_call",
-        "content": "selfgiveweapon",
-        "arguments": [
-          {
-            "type": "string",
-            "content": "knife_zm"
-          }
-        ]
-      },
-      {
-        "type": "function_call",
-        "content": "selfgive_start_weapon",
-        "arguments": [
-          {
-            "type": "number",
-            "content": "1"
-          }
-        ]
-      }
-    ],
     "arguments": [
       {
         "type": "variable_reference",
@@ -6274,11 +6252,34 @@
         "type": "variable_reference",
         "content": "alreadyspawned"
       }
+    ],
+    "children": [
+      {
+        "type": "function_call",
+        "content": "self giveweapon",
+        "arguments": [
+          {
+            "type": "string",
+            "content": "knife_zm"
+          }
+        ]
+      },
+      {
+        "type": "function_call",
+        "content": "self give_start_weapon",
+        "arguments": [
+          {
+            "type": "number",
+            "content": "1"
+          }
+        ]
+      }
     ]
   },
   {
     "type": "function_declaration",
     "content": "precache_team_characters",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -6320,12 +6321,12 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "precache_personality_characters",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -6387,12 +6388,12 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "give_personality_characters",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -6454,7 +6455,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfdetachall",
+        "content": "self detachall",
         "arguments": []
       },
       {
@@ -6583,11 +6584,11 @@
         "children": [
           {
             "type": "variable_reference",
-            "content": "case0:"
+            "content": "case 0:"
           },
           {
             "type": "function_call",
-            "content": "selfcharacter\\c_usa_dempsey_dlc4::main",
+            "content": "self character\\c_usa_dempsey_dlc4::main",
             "arguments": []
           },
           {
@@ -6596,7 +6597,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfsetviewmodel",
+            "content": "self setviewmodel",
             "arguments": [
               {
                 "type": "string",
@@ -6610,7 +6611,7 @@
           },
           {
             "type": "function_call",
-            "content": "level.voxmaps\\mp\\zombies\\_zm_audio::zmbvoxinitspeaker",
+            "content": "level.vox maps\\mp\\zombies\\_zm_audio::zmbvoxinitspeaker",
             "arguments": [
               {
                 "type": "string",
@@ -6632,7 +6633,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfset_player_is_female",
+            "content": "self set_player_is_female",
             "arguments": [
               {
                 "type": "number",
@@ -6664,11 +6665,11 @@
           },
           {
             "type": "variable_reference",
-            "content": "case1:"
+            "content": "case 1:"
           },
           {
             "type": "function_call",
-            "content": "selfcharacter\\c_rus_nikolai_dlc4::main",
+            "content": "self character\\c_rus_nikolai_dlc4::main",
             "arguments": []
           },
           {
@@ -6677,7 +6678,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfsetviewmodel",
+            "content": "self setviewmodel",
             "arguments": [
               {
                 "type": "string",
@@ -6691,7 +6692,7 @@
           },
           {
             "type": "function_call",
-            "content": "level.voxmaps\\mp\\zombies\\_zm_audio::zmbvoxinitspeaker",
+            "content": "level.vox maps\\mp\\zombies\\_zm_audio::zmbvoxinitspeaker",
             "arguments": [
               {
                 "type": "string",
@@ -6713,7 +6714,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfset_player_is_female",
+            "content": "self set_player_is_female",
             "arguments": [
               {
                 "type": "number",
@@ -6745,11 +6746,11 @@
           },
           {
             "type": "variable_reference",
-            "content": "case2:"
+            "content": "case 2:"
           },
           {
             "type": "function_call",
-            "content": "selfcharacter\\c_ger_richtofen_dlc4::main",
+            "content": "self character\\c_ger_richtofen_dlc4::main",
             "arguments": []
           },
           {
@@ -6758,7 +6759,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfsetviewmodel",
+            "content": "self setviewmodel",
             "arguments": [
               {
                 "type": "string",
@@ -6772,7 +6773,7 @@
           },
           {
             "type": "function_call",
-            "content": "level.voxmaps\\mp\\zombies\\_zm_audio::zmbvoxinitspeaker",
+            "content": "level.vox maps\\mp\\zombies\\_zm_audio::zmbvoxinitspeaker",
             "arguments": [
               {
                 "type": "string",
@@ -6794,7 +6795,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfset_player_is_female",
+            "content": "self set_player_is_female",
             "arguments": [
               {
                 "type": "number",
@@ -6826,11 +6827,11 @@
           },
           {
             "type": "variable_reference",
-            "content": "case3:"
+            "content": "case 3:"
           },
           {
             "type": "function_call",
-            "content": "selfcharacter\\c_jap_takeo_dlc4::main",
+            "content": "self character\\c_jap_takeo_dlc4::main",
             "arguments": []
           },
           {
@@ -6839,7 +6840,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfsetviewmodel",
+            "content": "self setviewmodel",
             "arguments": [
               {
                 "type": "string",
@@ -6853,7 +6854,7 @@
           },
           {
             "type": "function_call",
-            "content": "level.voxmaps\\mp\\zombies\\_zm_audio::zmbvoxinitspeaker",
+            "content": "level.vox maps\\mp\\zombies\\_zm_audio::zmbvoxinitspeaker",
             "arguments": [
               {
                 "type": "string",
@@ -6875,7 +6876,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfset_player_is_female",
+            "content": "self set_player_is_female",
             "arguments": [
               {
                 "type": "number",
@@ -6914,7 +6915,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfsetmovespeedscale",
+        "content": "self setmovespeedscale",
         "arguments": [
           {
             "type": "number",
@@ -6924,7 +6925,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfsetsprintduration",
+        "content": "self setsprintduration",
         "arguments": [
           {
             "type": "number",
@@ -6934,7 +6935,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfsetsprintcooldown",
+        "content": "self setsprintcooldown",
         "arguments": [
           {
             "type": "number",
@@ -6944,19 +6945,19 @@
       },
       {
         "type": "function_call",
-        "content": "selfthreadset_exert_id",
+        "content": "self thread set_exert_id",
         "arguments": []
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "set_exert_id",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -6976,7 +6977,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfmaps\\mp\\zombies\\_zm_audio::setexertvoice",
+        "content": "self maps\\mp\\zombies\\_zm_audio::setexertvoice",
         "arguments": [
           {
             "type": "variable_reference",
@@ -6992,12 +6993,12 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "assign_lowest_unused_character_index",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -7031,7 +7032,7 @@
       },
       {
         "type": "variable_assignment",
-        "content": "undefined",
+        "content": "",
         "children": [
           {
             "type": "number",
@@ -7057,7 +7058,7 @@
       },
       {
         "type": "variable_assignment",
-        "content": "undefined",
+        "content": "",
         "children": [
           {
             "type": "number",
@@ -7083,7 +7084,7 @@
       },
       {
         "type": "variable_assignment",
-        "content": "undefined",
+        "content": "",
         "children": [
           {
             "type": "number",
@@ -7109,7 +7110,7 @@
       },
       {
         "type": "variable_assignment",
-        "content": "undefined",
+        "content": "",
         "children": [
           {
             "type": "number",
@@ -7191,7 +7192,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "returncharindexarray"
+            "content": "return charindexarray"
           },
           {
             "type": "unhandled_token",
@@ -7239,7 +7240,7 @@
             "arguments": [
               {
                 "type": "variable_reference",
-                "content": "playerinplayers"
+                "content": "player in players"
               }
             ]
           },
@@ -7316,8 +7317,7 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_call",
@@ -7367,7 +7367,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.has_richtofen"
+        "content": "&& level.has_richtofen"
       }
     ]
   },
@@ -7387,7 +7387,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "return2"
+    "content": "return 2"
   },
   {
     "type": "unhandled_token",
@@ -7447,7 +7447,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "returncharindexarray"
+    "content": "return charindexarray"
   },
   {
     "type": "unhandled_token",
@@ -7471,7 +7471,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "return0"
+    "content": "return 0"
   },
   {
     "type": "unhandled_token",
@@ -7480,15 +7480,16 @@
   {
     "type": "function_declaration",
     "content": "give_team_characters",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfdetachall",
+        "content": "self detachall",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "selfset_player_is_female",
+        "content": "self set_player_is_female",
         "arguments": [
           {
             "type": "number",
@@ -7575,15 +7576,15 @@
         "children": [
           {
             "type": "variable_reference",
-            "content": "case0:"
+            "content": "case 0:"
           },
           {
             "type": "variable_reference",
-            "content": "case2:"
+            "content": "case 2:"
           },
           {
             "type": "function_call",
-            "content": "selfsetmodel",
+            "content": "self setmodel",
             "arguments": [
               {
                 "type": "string",
@@ -7617,7 +7618,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfsetviewmodel",
+            "content": "self setviewmodel",
             "arguments": [
               {
                 "type": "string",
@@ -7649,15 +7650,15 @@
           },
           {
             "type": "variable_reference",
-            "content": "case1:"
+            "content": "case 1:"
           },
           {
             "type": "variable_reference",
-            "content": "case3:"
+            "content": "case 3:"
           },
           {
             "type": "function_call",
-            "content": "selfsetmodel",
+            "content": "self setmodel",
             "arguments": [
               {
                 "type": "string",
@@ -7691,7 +7692,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfsetviewmodel",
+            "content": "self setviewmodel",
             "arguments": [
               {
                 "type": "string",
@@ -7730,7 +7731,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfsetmovespeedscale",
+        "content": "self setmovespeedscale",
         "arguments": [
           {
             "type": "number",
@@ -7740,7 +7741,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfsetsprintduration",
+        "content": "self setsprintduration",
         "arguments": [
           {
             "type": "number",
@@ -7750,7 +7751,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfsetsprintcooldown",
+        "content": "self setsprintcooldown",
         "arguments": [
           {
             "type": "number",
@@ -7758,12 +7759,12 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "initcharacterstartindex",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -7781,12 +7782,12 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "zm_player_fake_death_cleanup",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -7813,7 +7814,7 @@
         "children": [
           {
             "type": "function_call",
-            "content": "self._fall_down_anchordelete",
+            "content": "self._fall_down_anchor delete",
             "arguments": []
           },
           {
@@ -7837,16 +7838,21 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "zm_player_fake_death",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "vdir"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
-        "content": "levelnotify",
+        "content": "level notify",
         "arguments": [
           {
             "type": "string",
@@ -7856,7 +7862,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfnotify",
+        "content": "self notify",
         "arguments": [
           {
             "type": "string",
@@ -7870,7 +7876,7 @@
         "children": [
           {
             "type": "function_call",
-            "content": "selfgetstance",
+            "content": "self getstance",
             "arguments": []
           }
         ]
@@ -7887,12 +7893,12 @@
       },
       {
         "type": "function_call",
-        "content": "selfenableinvulnerability",
+        "content": "self enableinvulnerability",
         "arguments": []
       },
       {
         "type": "function_call",
-        "content": "selftakeallweapons",
+        "content": "self takeallweapons",
         "arguments": []
       },
       {
@@ -7915,7 +7921,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&self.insta_killed"
+            "content": "&& self.insta_killed"
           }
         ]
       },
@@ -7924,7 +7930,7 @@
         "children": [
           {
             "type": "function_call",
-            "content": "selfmaps\\mp\\zombies\\_zm::player_fake_death",
+            "content": "self maps\\mp\\zombies\\_zm::player_fake_death",
             "arguments": []
           },
           {
@@ -7933,7 +7939,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfallowprone",
+            "content": "self allowprone",
             "arguments": [
               {
                 "type": "number",
@@ -7947,7 +7953,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfallowcrouch",
+            "content": "self allowcrouch",
             "arguments": [
               {
                 "type": "number",
@@ -7961,7 +7967,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfallowstand",
+            "content": "self allowstand",
             "arguments": [
               {
                 "type": "number",
@@ -7975,7 +7981,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "wait0.25"
+            "content": "wait 0.25"
           },
           {
             "type": "unhandled_token",
@@ -7983,7 +7989,7 @@
           },
           {
             "type": "function_call",
-            "content": "selffreezecontrols",
+            "content": "self freezecontrols",
             "arguments": [
               {
                 "type": "number",
@@ -8011,7 +8017,7 @@
         "children": [
           {
             "type": "function_call",
-            "content": "selffreezecontrols",
+            "content": "self freezecontrols",
             "arguments": [
               {
                 "type": "number",
@@ -8025,7 +8031,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfthreadfall_down",
+            "content": "self thread fall_down",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -8043,7 +8049,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "wait1"
+            "content": "wait 1"
           },
           {
             "type": "unhandled_token",
@@ -8056,21 +8062,25 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "vdir"
-      }
     ]
   },
   {
     "type": "function_declaration",
     "content": "fall_down",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "vdir"
+      },
+      {
+        "type": "variable_reference",
+        "content": "stance"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -8080,7 +8090,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelendon",
+        "content": "level endon",
         "arguments": [
           {
             "type": "string",
@@ -8090,7 +8100,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfghost",
+        "content": "self ghost",
         "arguments": []
       },
       {
@@ -8133,7 +8143,7 @@
         "children": [
           {
             "type": "function_call",
-            "content": "selfgetplayerangles",
+            "content": "self getplayerangles",
             "arguments": []
           }
         ]
@@ -8248,7 +8258,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&length"
+            "content": "&& length"
           },
           {
             "type": "scope",
@@ -8462,7 +8472,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfplayerlinkto",
+        "content": "self playerlinkto",
         "arguments": [
           {
             "type": "variable_reference",
@@ -8472,7 +8482,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfplaysoundtoplayer",
+        "content": "self playsoundtoplayer",
         "arguments": [
           {
             "type": "string",
@@ -8549,7 +8559,7 @@
             "children": [
               {
                 "type": "function_call",
-                "content": "selfget_eye",
+                "content": "self get_eye",
                 "arguments": []
               }
             ]
@@ -8648,7 +8658,7 @@
           },
           {
             "type": "function_call",
-            "content": "linkermoveto",
+            "content": "linker moveto",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -8670,7 +8680,7 @@
           },
           {
             "type": "function_call",
-            "content": "linkerrotateto",
+            "content": "linker rotateto",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -8699,7 +8709,7 @@
       },
       {
         "type": "function_call",
-        "content": "selffreezecontrols",
+        "content": "self freezecontrols",
         "arguments": [
           {
             "type": "number",
@@ -8719,7 +8729,7 @@
       },
       {
         "type": "function_call",
-        "content": "linkerwaittill",
+        "content": "linker waittill",
         "arguments": [
           {
             "type": "string",
@@ -8729,7 +8739,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfgiveweapon",
+        "content": "self giveweapon",
         "arguments": [
           {
             "type": "string",
@@ -8739,7 +8749,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfswitchtoweapon",
+        "content": "self switchtoweapon",
         "arguments": [
           {
             "type": "string",
@@ -8852,7 +8862,7 @@
           },
           {
             "type": "function_call",
-            "content": "linkermoveto",
+            "content": "linker moveto",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -8878,7 +8888,7 @@
           },
           {
             "type": "function_call",
-            "content": "linkerwaittill",
+            "content": "linker waittill",
             "arguments": [
               {
                 "type": "string",
@@ -8970,7 +8980,7 @@
           },
           {
             "type": "function_call",
-            "content": "linkermoveto",
+            "content": "linker moveto",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -8992,7 +9002,7 @@
           },
           {
             "type": "function_call",
-            "content": "linkerwaittill",
+            "content": "linker waittill",
             "arguments": [
               {
                 "type": "string",
@@ -9006,7 +9016,7 @@
           },
           {
             "type": "function_call",
-            "content": "linkermoveto",
+            "content": "linker moveto",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -9035,28 +9045,19 @@
       },
       {
         "type": "variable_reference",
-        "content": "wait15"
+        "content": "wait 15"
       },
       {
         "type": "function_call",
-        "content": "linkerdelete",
+        "content": "linker delete",
         "arguments": []
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "vdir"
-      },
-      {
-        "type": "variable_reference",
-        "content": "stance"
       }
     ]
   },
   {
     "type": "function_declaration",
     "content": "initial_round_wait_func",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -9068,12 +9069,12 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "offhand_weapon_overrride",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -9235,12 +9236,17 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "equipment_safe_to_drop",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "weapon"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
@@ -9268,27 +9274,27 @@
       },
       {
         "type": "variable_reference",
-        "content": "returntrue"
+        "content": "return true"
       },
       {
         "type": "variable_reference",
-        "content": "returntrue"
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "weapon"
+        "content": "return true"
       }
     ]
   },
   {
     "type": "function_declaration",
     "content": "offhand_weapon_give_override",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "str_weapon"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -9316,14 +9322,14 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&isdefined"
+            "content": "&& isdefined"
           },
           {
             "type": "scope",
             "children": [
               {
                 "type": "variable_reference",
-                "content": "selfget_player_tactical_grenade"
+                "content": "self get_player_tactical_grenade"
               }
             ],
             "content": "()"
@@ -9340,7 +9346,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfis_player_tactical_grenade",
+        "content": "self is_player_tactical_grenade",
         "arguments": [
           {
             "type": "variable_reference",
@@ -9357,11 +9363,11 @@
         "children": [
           {
             "type": "function_call",
-            "content": "selfsetweaponammoclip",
+            "content": "self setweaponammoclip",
             "arguments": [
               {
                 "type": "variable_reference",
-                "content": "selfget_player_tactical_grenade"
+                "content": "self get_player_tactical_grenade"
               },
               {
                 "type": "scope",
@@ -9380,11 +9386,11 @@
           },
           {
             "type": "function_call",
-            "content": "selftakeweapon",
+            "content": "self takeweapon",
             "arguments": [
               {
                 "type": "variable_reference",
-                "content": "selfget_player_tactical_grenade"
+                "content": "self get_player_tactical_grenade"
               },
               {
                 "type": "scope",
@@ -9406,19 +9412,14 @@
       },
       {
         "type": "variable_reference",
-        "content": "returnfalse"
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "str_weapon"
+        "content": "return false"
       }
     ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_weaponobjects_on_player_connect_override",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -9444,12 +9445,17 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_player_intersection_tracker_override",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "e_player"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
@@ -9471,7 +9477,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&e_player.b_already_on_tank||isdefined"
+            "content": "&& e_player.b_already_on_tank || isdefined"
           },
           {
             "type": "scope",
@@ -9485,13 +9491,13 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&self.b_already_on_tank"
+            "content": "&& self.b_already_on_tank"
           }
         ]
       },
       {
         "type": "variable_reference",
-        "content": "returntrue"
+        "content": "return true"
       },
       {
         "type": "function_call",
@@ -9513,7 +9519,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&e_player.giant_robot_transition||isdefined"
+            "content": "&& e_player.giant_robot_transition || isdefined"
           },
           {
             "type": "scope",
@@ -9527,41 +9533,36 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&self.giant_robot_transition"
+            "content": "&& self.giant_robot_transition"
           }
         ]
       },
       {
         "type": "variable_reference",
-        "content": "returntrue"
+        "content": "return true"
       },
       {
         "type": "variable_reference",
-        "content": "returnfalse"
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "e_player"
+        "content": "return false"
       }
     ]
   },
   {
     "type": "function_declaration",
     "content": "init_tomb_stats",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfmaps\\mp\\zm_tomb_achievement::init_player_achievement_stats",
+        "content": "self maps\\mp\\zm_tomb_achievement::init_player_achievement_stats",
         "arguments": []
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "custom_add_weapons",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -11047,7 +11048,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&level.raygun2_included"
+            "content": "&& level.raygun2_included"
           }
         ]
       },
@@ -11613,12 +11614,12 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "include_weapons",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -12878,7 +12879,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&level.raygun2_included"
+            "content": "&& level.raygun2_included"
           }
         ]
       },
@@ -12982,12 +12983,12 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "include_powerups",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -13138,12 +13139,12 @@
         "type": "math_operator",
         "content": "/"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "include_perks_in_random_rotation",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -13245,12 +13246,12 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_powerup_init",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -13262,12 +13263,21 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_powerup_grab",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "s_powerup"
+      },
+      {
+        "type": "variable_reference",
+        "content": "e_player"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
@@ -13281,7 +13291,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadmaps\\mp\\zombies\\_zm_powerup_zombie_blood::zombie_blood_powerup",
+        "content": "level thread maps\\mp\\zombies\\_zm_powerup_zombie_blood::zombie_blood_powerup",
         "arguments": [
           {
             "type": "variable_reference",
@@ -13293,21 +13303,12 @@
           }
         ]
       }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "s_powerup"
-      },
-      {
-        "type": "variable_reference",
-        "content": "e_player"
-      }
     ]
   },
   {
     "type": "function_declaration",
     "content": "setup_powerup_devgui",
+    "arguments": [],
     "children": [
       {
         "type": "math_operator",
@@ -13345,7 +13346,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "PowerUps:2"
+            "content": "Power Ups:2"
           },
           {
             "type": "math_operator",
@@ -13361,7 +13362,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "DropZombieBlood:1\\"
+            "content": "Drop Zombie Blood:1\\"
           },
           {
             "type": "string",
@@ -13369,7 +13370,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "zombie_bloodon\\"
+            "content": "zombie_blood on\\"
           },
           {
             "type": "string",
@@ -13379,19 +13380,19 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadwatch_devgui_zombie_blood",
+        "content": "level thread watch_devgui_zombie_blood",
         "arguments": []
       },
       {
         "type": "math_operator",
         "content": "/"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "setup_oneinchpunch_devgui",
+    "arguments": [],
     "children": [
       {
         "type": "math_operator",
@@ -13453,7 +13454,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "test_oneinchpunchon\\"
+            "content": "test_oneinchpunch on\\"
           },
           {
             "type": "string",
@@ -13517,7 +13518,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "test_oneinchpunch_upgradedon\\"
+            "content": "test_oneinchpunch_upgraded on\\"
           },
           {
             "type": "string",
@@ -13581,7 +13582,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "test_oneinchpunch_airon\\"
+            "content": "test_oneinchpunch_air on\\"
           },
           {
             "type": "string",
@@ -13645,7 +13646,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "test_oneinchpunch_fireon\\"
+            "content": "test_oneinchpunch_fire on\\"
           },
           {
             "type": "string",
@@ -13709,7 +13710,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "test_oneinchpunch_iceon\\"
+            "content": "test_oneinchpunch_ice on\\"
           },
           {
             "type": "string",
@@ -13773,7 +13774,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "test_oneinchpunch_lightningon\\"
+            "content": "test_oneinchpunch_lightning on\\"
           },
           {
             "type": "string",
@@ -13783,19 +13784,19 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadwatch_devgui_oneinchpunch",
+        "content": "level thread watch_devgui_oneinchpunch",
         "arguments": []
       },
       {
         "type": "math_operator",
         "content": "/"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "watch_devgui_oneinchpunch",
+    "arguments": [],
     "children": [
       {
         "type": "math_operator",
@@ -13881,7 +13882,7 @@
           },
           {
             "type": "function_call",
-            "content": "playerthreadmaps\\mp\\zombies\\_zm_weap_one_inch_punch::one_inch_punch_melee_attack",
+            "content": "player thread maps\\mp\\zombies\\_zm_weap_one_inch_punch::one_inch_punch_melee_attack",
             "arguments": []
           },
           {
@@ -13897,7 +13898,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -13981,7 +13982,7 @@
           },
           {
             "type": "function_call",
-            "content": "playerthreadmaps\\mp\\zombies\\_zm_weap_one_inch_punch::one_inch_punch_melee_attack",
+            "content": "player thread maps\\mp\\zombies\\_zm_weap_one_inch_punch::one_inch_punch_melee_attack",
             "arguments": []
           },
           {
@@ -13997,7 +13998,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -14081,7 +14082,7 @@
           },
           {
             "type": "function_call",
-            "content": "playerthreadmaps\\mp\\zombies\\_zm_weap_one_inch_punch::one_inch_punch_melee_attack",
+            "content": "player thread maps\\mp\\zombies\\_zm_weap_one_inch_punch::one_inch_punch_melee_attack",
             "arguments": []
           },
           {
@@ -14097,7 +14098,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -14181,7 +14182,7 @@
           },
           {
             "type": "function_call",
-            "content": "playerthreadmaps\\mp\\zombies\\_zm_weap_one_inch_punch::one_inch_punch_melee_attack",
+            "content": "player thread maps\\mp\\zombies\\_zm_weap_one_inch_punch::one_inch_punch_melee_attack",
             "arguments": []
           },
           {
@@ -14197,7 +14198,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -14281,7 +14282,7 @@
           },
           {
             "type": "function_call",
-            "content": "playerthreadmaps\\mp\\zombies\\_zm_weap_one_inch_punch::one_inch_punch_melee_attack",
+            "content": "player thread maps\\mp\\zombies\\_zm_weap_one_inch_punch::one_inch_punch_melee_attack",
             "arguments": []
           },
           {
@@ -14297,7 +14298,7 @@
       },
       {
         "type": "function_call",
-        "content": "elseif",
+        "content": "else if",
         "arguments": [
           {
             "type": "variable_reference",
@@ -14381,7 +14382,7 @@
           },
           {
             "type": "function_call",
-            "content": "playerthreadmaps\\mp\\zombies\\_zm_weap_one_inch_punch::one_inch_punch_melee_attack",
+            "content": "player thread maps\\mp\\zombies\\_zm_weap_one_inch_punch::one_inch_punch_melee_attack",
             "arguments": []
           },
           {
@@ -14397,10 +14398,9 @@
       },
       {
         "type": "variable_reference",
-        "content": "wait0.1"
+        "content": "wait 0.1"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "math_operator",
@@ -14413,6 +14413,7 @@
   {
     "type": "function_declaration",
     "content": "setup_tablet_devgui",
+    "arguments": [],
     "children": [
       {
         "type": "math_operator",
@@ -14458,7 +14459,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "EasterAnn:3"
+            "content": "Easter Ann:3"
           },
           {
             "type": "math_operator",
@@ -14482,7 +14483,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "test_player_tablet0\\"
+            "content": "test_player_tablet 0\\"
           },
           {
             "type": "string",
@@ -14516,7 +14517,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "EasterAnn:3"
+            "content": "Easter Ann:3"
           },
           {
             "type": "math_operator",
@@ -14540,7 +14541,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "test_player_tablet1\\"
+            "content": "test_player_tablet 1\\"
           },
           {
             "type": "string",
@@ -14574,7 +14575,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "EasterAnn:3"
+            "content": "Easter Ann:3"
           },
           {
             "type": "math_operator",
@@ -14598,7 +14599,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "test_player_tablet2\\"
+            "content": "test_player_tablet 2\\"
           },
           {
             "type": "string",
@@ -14608,19 +14609,19 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadwatch_devgui_tablet",
+        "content": "level thread watch_devgui_tablet",
         "arguments": []
       },
       {
         "type": "math_operator",
         "content": "/"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "watch_devgui_tablet",
+    "arguments": [],
     "children": [
       {
         "type": "math_operator",
@@ -14722,7 +14723,7 @@
           },
           {
             "type": "function_call",
-            "content": "playersetclientfieldtoplayer",
+            "content": "player setclientfieldtoplayer",
             "arguments": [
               {
                 "type": "string",
@@ -14765,10 +14766,9 @@
       },
       {
         "type": "variable_reference",
-        "content": "wait0.1"
+        "content": "wait 0.1"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "math_operator",
@@ -14781,6 +14781,7 @@
   {
     "type": "function_declaration",
     "content": "watch_devgui_zombie_blood",
+    "arguments": [],
     "children": [
       {
         "type": "math_operator",
@@ -14843,7 +14844,7 @@
           },
           {
             "type": "function_call",
-            "content": "levelthreadmaps\\mp\\zombies\\_zm_devgui::zombie_devgui_give_powerup",
+            "content": "level thread maps\\mp\\zombies\\_zm_devgui::zombie_devgui_give_powerup",
             "arguments": [
               {
                 "type": "string",
@@ -14868,10 +14869,9 @@
       },
       {
         "type": "variable_reference",
-        "content": "wait0.1"
+        "content": "wait 0.1"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "math_operator",
@@ -14884,6 +14884,7 @@
   {
     "type": "function_declaration",
     "content": "watch_devgui_double_points",
+    "arguments": [],
     "children": [
       {
         "type": "math_operator",
@@ -14946,7 +14947,7 @@
           },
           {
             "type": "function_call",
-            "content": "levelthreadmaps\\mp\\zombies\\_zm_devgui::zombie_devgui_give_powerup",
+            "content": "level thread maps\\mp\\zombies\\_zm_devgui::zombie_devgui_give_powerup",
             "arguments": [
               {
                 "type": "string",
@@ -14985,10 +14986,9 @@
       },
       {
         "type": "variable_reference",
-        "content": "wait0.1"
+        "content": "wait 0.1"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "math_operator",
@@ -15001,6 +15001,7 @@
   {
     "type": "function_declaration",
     "content": "setup_rex_starts",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -15046,18 +15047,18 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "dummy",
-    "children": [],
-    "arguments": []
+    "arguments": [],
+    "children": []
   },
   {
     "type": "function_declaration",
     "content": "working_zone_init",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -17817,7 +17818,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadactivate_zone_trig",
+        "content": "level thread activate_zone_trig",
         "arguments": [
           {
             "type": "string",
@@ -17831,7 +17832,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadactivate_zone_trig",
+        "content": "level thread activate_zone_trig",
         "arguments": [
           {
             "type": "string",
@@ -17845,7 +17846,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadactivate_zone_trig",
+        "content": "level thread activate_zone_trig",
         "arguments": [
           {
             "type": "string",
@@ -17859,7 +17860,7 @@
       },
       {
         "type": "function_call",
-        "content": "levelthreadactivate_zone_trig",
+        "content": "level thread activate_zone_trig",
         "arguments": [
           {
             "type": "string",
@@ -18019,12 +18020,25 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "activate_zone_trig",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "str_name"
+      },
+      {
+        "type": "variable_reference",
+        "content": "str_zone1"
+      },
+      {
+        "type": "variable_reference",
+        "content": "str_zone2"
+      }
+    ],
     "children": [
       {
         "type": "variable_assignment",
@@ -18048,7 +18062,7 @@
       },
       {
         "type": "function_call",
-        "content": "trigwaittill",
+        "content": "trig waittill",
         "arguments": [
           {
             "type": "string",
@@ -18118,28 +18132,15 @@
       },
       {
         "type": "function_call",
-        "content": "trigdelete",
+        "content": "trig delete",
         "arguments": []
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "str_name"
-      },
-      {
-        "type": "variable_reference",
-        "content": "str_zone1"
-      },
-      {
-        "type": "variable_reference",
-        "content": "str_zone2"
       }
     ]
   },
   {
     "type": "function_declaration",
     "content": "check_tank_platform_zone",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -18156,7 +18157,7 @@
         "children": [
           {
             "type": "function_call",
-            "content": "levelwaittill",
+            "content": "level waittill",
             "arguments": [
               {
                 "type": "string",
@@ -18192,7 +18193,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "wait1"
+            "content": "wait 1"
           },
           {
             "type": "unhandled_token",
@@ -18215,66 +18216,11 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_vehicle_damage_override_wrapper",
-    "children": [
-      {
-        "type": "function_call",
-        "content": "if",
-        "arguments": [
-          {
-            "type": "variable_reference",
-            "content": "isdefined"
-          },
-          {
-            "type": "scope",
-            "children": [
-              {
-                "type": "variable_reference",
-                "content": "level.a_func_vehicle_damage_override"
-              },
-              {
-                "type": "unhandled_token",
-                "content": "["
-              },
-              {
-                "type": "variable_reference",
-                "content": "self.vehicletype"
-              },
-              {
-                "type": "unhandled_token",
-                "content": "]"
-              }
-            ],
-            "content": "()"
-          }
-        ]
-      },
-      {
-        "type": "variable_reference",
-        "content": "returnlevel.a_func_vehicle_damage_override"
-      },
-      {
-        "type": "unhandled_token",
-        "content": "["
-      },
-      {
-        "type": "variable_reference",
-        "content": "self.vehicletype"
-      },
-      {
-        "type": "unhandled_token",
-        "content": "]"
-      },
-      {
-        "type": "variable_reference",
-        "content": "returnidamage"
-      }
-    ],
     "arguments": [
       {
         "type": "variable_reference",
@@ -18328,11 +18274,66 @@
         "type": "variable_reference",
         "content": "partname"
       }
+    ],
+    "children": [
+      {
+        "type": "function_call",
+        "content": "if",
+        "arguments": [
+          {
+            "type": "variable_reference",
+            "content": "isdefined"
+          },
+          {
+            "type": "scope",
+            "children": [
+              {
+                "type": "variable_reference",
+                "content": "level.a_func_vehicle_damage_override"
+              },
+              {
+                "type": "unhandled_token",
+                "content": "["
+              },
+              {
+                "type": "variable_reference",
+                "content": "self.vehicletype"
+              },
+              {
+                "type": "unhandled_token",
+                "content": "]"
+              }
+            ],
+            "content": "()"
+          }
+        ]
+      },
+      {
+        "type": "variable_reference",
+        "content": "return level.a_func_vehicle_damage_override"
+      },
+      {
+        "type": "unhandled_token",
+        "content": "["
+      },
+      {
+        "type": "variable_reference",
+        "content": "self.vehicletype"
+      },
+      {
+        "type": "unhandled_token",
+        "content": "]"
+      },
+      {
+        "type": "variable_reference",
+        "content": "return idamage"
+      }
     ]
   },
   {
     "type": "function_declaration",
     "content": "drop_all_barriers",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -18463,7 +18464,7 @@
             "arguments": [
               {
                 "type": "variable_reference",
-                "content": "zbarrierinzbarriers"
+                "content": "zbarrier in zbarriers"
               }
             ]
           },
@@ -18477,7 +18478,7 @@
             "children": [
               {
                 "type": "function_call",
-                "content": "zbarriergetnumzbarrierpieces",
+                "content": "zbarrier getnumzbarrierpieces",
                 "arguments": []
               }
             ]
@@ -18532,7 +18533,7 @@
           },
           {
             "type": "function_call",
-            "content": "zbarrierhidezbarrierpiece",
+            "content": "zbarrier hidezbarrierpiece",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -18546,7 +18547,7 @@
           },
           {
             "type": "function_call",
-            "content": "zbarriersetzbarrierpiecestate",
+            "content": "zbarrier setzbarrierpiecestate",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -18571,10 +18572,9 @@
       },
       {
         "type": "variable_reference",
-        "content": "wait0.05"
+        "content": "wait 0.05"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "unhandled_token",
@@ -18587,6 +18587,12 @@
   {
     "type": "function_declaration",
     "content": "get_all_zone_zbarriers",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "zone_name"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
@@ -18614,7 +18620,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "returnundefined"
+        "content": "return undefined"
       },
       {
         "type": "variable_assignment",
@@ -18640,19 +18646,19 @@
       },
       {
         "type": "variable_reference",
-        "content": "returnzone.zbarriers"
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "zone_name"
+        "content": "return zone.zbarriers"
       }
     ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_special_weapon_magicbox_check",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "weapon"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
@@ -18674,7 +18680,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&level.raygun2_included"
+            "content": "&& level.raygun2_included"
           }
         ]
       },
@@ -18701,7 +18707,7 @@
             "arguments": [
               {
                 "type": "variable_reference",
-                "content": "selfhas_weapon_or_upgrade"
+                "content": "self has_weapon_or_upgrade"
               },
               {
                 "type": "scope",
@@ -18717,7 +18723,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "returnfalse"
+            "content": "return false"
           },
           {
             "type": "unhandled_token",
@@ -18749,7 +18755,7 @@
             "arguments": [
               {
                 "type": "variable_reference",
-                "content": "selfhas_weapon_or_upgrade"
+                "content": "self has_weapon_or_upgrade"
               },
               {
                 "type": "scope",
@@ -18765,7 +18771,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "returnfalse"
+            "content": "return false"
           },
           {
             "type": "unhandled_token",
@@ -18801,7 +18807,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "returnfalse"
+            "content": "return false"
           },
           {
             "type": "unhandled_token",
@@ -18813,12 +18819,6 @@
           }
         ],
         "content": "{}"
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "weapon"
       }
     ]
   },
@@ -18852,13 +18852,13 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&self.beacon_ready"
+        "content": "&& self.beacon_ready"
       }
     ]
   },
   {
     "type": "variable_reference",
-    "content": "returntrue"
+    "content": "return true"
   },
   {
     "type": "variable_reference",
@@ -18866,7 +18866,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "returnfalse"
+    "content": "return false"
   },
   {
     "type": "unhandled_token",
@@ -18914,7 +18914,7 @@
     "arguments": [
       {
         "type": "variable_reference",
-        "content": "selfhas_weapon_or_upgrade"
+        "content": "self has_weapon_or_upgrade"
       },
       {
         "type": "scope",
@@ -18946,7 +18946,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "returnfalse"
+    "content": "return false"
   },
   {
     "type": "unhandled_token",
@@ -18954,7 +18954,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "returntrue"
+    "content": "return true"
   },
   {
     "type": "unhandled_token",
@@ -18963,6 +18963,7 @@
   {
     "type": "function_declaration",
     "content": "custom_vending_precaching",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -19164,8 +19165,7 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_call",
@@ -19187,7 +19187,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.zombiemode_using_pack_a_punch"
+        "content": "&& level.zombiemode_using_pack_a_punch"
       }
     ]
   },
@@ -19267,7 +19267,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -19299,7 +19299,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -19358,7 +19358,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.zombiemode_using_additionalprimaryweapon_perk"
+        "content": "&& level.zombiemode_using_additionalprimaryweapon_perk"
       }
     ]
   },
@@ -19424,7 +19424,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -19456,7 +19456,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -19619,7 +19619,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.zombiemode_using_deadshot_perk"
+        "content": "&& level.zombiemode_using_deadshot_perk"
       }
     ]
   },
@@ -19695,7 +19695,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -19727,7 +19727,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -19890,7 +19890,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.zombiemode_using_divetonuke_perk"
+        "content": "&& level.zombiemode_using_divetonuke_perk"
       }
     ]
   },
@@ -19966,7 +19966,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -19998,7 +19998,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -20161,7 +20161,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.zombiemode_using_doubletap_perk"
+        "content": "&& level.zombiemode_using_doubletap_perk"
       }
     ]
   },
@@ -20237,7 +20237,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -20269,7 +20269,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -20432,7 +20432,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.zombiemode_using_juggernaut_perk"
+        "content": "&& level.zombiemode_using_juggernaut_perk"
       }
     ]
   },
@@ -20508,7 +20508,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -20540,7 +20540,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -20703,7 +20703,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.zombiemode_using_marathon_perk"
+        "content": "&& level.zombiemode_using_marathon_perk"
       }
     ]
   },
@@ -20779,7 +20779,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -20811,7 +20811,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -20974,7 +20974,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.zombiemode_using_revive_perk"
+        "content": "&& level.zombiemode_using_revive_perk"
       }
     ]
   },
@@ -21050,7 +21050,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -21082,7 +21082,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -21114,7 +21114,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -21277,7 +21277,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.zombiemode_using_sleightofhand_perk"
+        "content": "&& level.zombiemode_using_sleightofhand_perk"
       }
     ]
   },
@@ -21353,7 +21353,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -21385,7 +21385,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -21548,7 +21548,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.zombiemode_using_tombstone_perk"
+        "content": "&& level.zombiemode_using_tombstone_perk"
       }
     ]
   },
@@ -21634,7 +21634,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -21666,7 +21666,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -21829,7 +21829,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&level.zombiemode_using_chugabud_perk"
+        "content": "&& level.zombiemode_using_chugabud_perk"
       }
     ]
   },
@@ -21915,7 +21915,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -21947,7 +21947,7 @@
   },
   {
     "type": "variable_assignment",
-    "content": "undefined",
+    "content": "",
     "children": [
       {
         "type": "function_call",
@@ -22097,6 +22097,52 @@
   {
     "type": "function_declaration",
     "content": "tomb_actor_damage_override_wrapper",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "inflictor"
+      },
+      {
+        "type": "variable_reference",
+        "content": "attacker"
+      },
+      {
+        "type": "variable_reference",
+        "content": "damage"
+      },
+      {
+        "type": "variable_reference",
+        "content": "flags"
+      },
+      {
+        "type": "variable_reference",
+        "content": "meansofdeath"
+      },
+      {
+        "type": "variable_reference",
+        "content": "weapon"
+      },
+      {
+        "type": "variable_reference",
+        "content": "vpoint"
+      },
+      {
+        "type": "variable_reference",
+        "content": "vdir"
+      },
+      {
+        "type": "variable_reference",
+        "content": "shitloc"
+      },
+      {
+        "type": "variable_reference",
+        "content": "psoffsettime"
+      },
+      {
+        "type": "variable_reference",
+        "content": "boneindex"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
@@ -22118,7 +22164,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&self.b_zombie_blood_damage_only"
+            "content": "&& self.b_zombie_blood_damage_only"
           }
         ]
       },
@@ -22175,7 +22221,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "return0"
+            "content": "return 0"
           },
           {
             "type": "unhandled_token",
@@ -22208,7 +22254,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&self.script_noteworthy"
+            "content": "&& self.script_noteworthy"
           }
         ]
       },
@@ -22269,7 +22315,7 @@
           },
           {
             "type": "function_call",
-            "content": "attackermaps\\mp\\zombies\\_zm_score::player_add_points",
+            "content": "attacker maps\\mp\\zombies\\_zm_score::player_add_points",
             "arguments": [
               {
                 "type": "string",
@@ -22310,52 +22356,6 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "inflictor"
-      },
-      {
-        "type": "variable_reference",
-        "content": "attacker"
-      },
-      {
-        "type": "variable_reference",
-        "content": "damage"
-      },
-      {
-        "type": "variable_reference",
-        "content": "flags"
-      },
-      {
-        "type": "variable_reference",
-        "content": "meansofdeath"
-      },
-      {
-        "type": "variable_reference",
-        "content": "weapon"
-      },
-      {
-        "type": "variable_reference",
-        "content": "vpoint"
-      },
-      {
-        "type": "variable_reference",
-        "content": "vdir"
-      },
-      {
-        "type": "variable_reference",
-        "content": "shitloc"
-      },
-      {
-        "type": "variable_reference",
-        "content": "psoffsettime"
-      },
-      {
-        "type": "variable_reference",
-        "content": "boneindex"
-      }
     ]
   },
   {
@@ -22368,7 +22368,7 @@
     "children": [
       {
         "type": "function_call",
-        "content": "selfmaps\\mp\\zombies\\_zm::actor_damage_override_wrapper",
+        "content": "self maps\\mp\\zombies\\_zm::actor_damage_override_wrapper",
         "arguments": [
           {
             "type": "variable_reference",
@@ -22448,12 +22448,12 @@
   },
   {
     "type": "function_call",
-    "content": "selfthreadzombie_gib_guts",
+    "content": "self thread zombie_gib_guts",
     "arguments": []
   },
   {
     "type": "function_call",
-    "content": "elseif",
+    "content": "else if",
     "arguments": [
       {
         "type": "variable_reference",
@@ -22471,7 +22471,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&self.b_on_tank||isdefined"
+        "content": "&& self.b_on_tank || isdefined"
       },
       {
         "type": "scope",
@@ -22485,13 +22485,13 @@
       },
       {
         "type": "variable_reference",
-        "content": "&&self.b_climbing_tank"
+        "content": "&& self.b_climbing_tank"
       }
     ]
   },
   {
     "type": "function_call",
-    "content": "selfmaps\\mp\\zm_tomb_tank::zombie_on_tank_death_animscript_callback",
+    "content": "self maps\\mp\\zm_tomb_tank::zombie_on_tank_death_animscript_callback",
     "arguments": [
       {
         "type": "variable_reference",
@@ -22545,7 +22545,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "returnreturn_val"
+    "content": "return return_val"
   },
   {
     "type": "unhandled_token",
@@ -22554,6 +22554,7 @@
   {
     "type": "function_declaration",
     "content": "tomb_zombie_death_event_callback",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -22575,7 +22576,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&isdefined"
+            "content": "&& isdefined"
           },
           {
             "type": "scope",
@@ -22589,7 +22590,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&isdefined"
+            "content": "&& isdefined"
           },
           {
             "type": "scope",
@@ -22603,7 +22604,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&isdefined"
+            "content": "&& isdefined"
           },
           {
             "type": "scope",
@@ -22617,7 +22618,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&isdefined"
+            "content": "&& isdefined"
           },
           {
             "type": "scope",
@@ -22631,7 +22632,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&isplayer"
+            "content": "&& isplayer"
           },
           {
             "type": "scope",
@@ -22684,7 +22685,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "&&maps\\mp\\zombies\\_zm_challenges::challenge_exists"
+                "content": "&& maps\\mp\\zombies\\_zm_challenges::challenge_exists"
               },
               {
                 "type": "scope",
@@ -22742,7 +22743,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "||isdefined"
+                "content": "|| isdefined"
               },
               {
                 "type": "scope",
@@ -22756,7 +22757,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "&&isdefined"
+                "content": "&& isdefined"
               },
               {
                 "type": "scope",
@@ -22770,7 +22771,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "&&self.script_noteworthy"
+                "content": "&& self.script_noteworthy"
               }
             ]
           },
@@ -22780,7 +22781,7 @@
           },
           {
             "type": "function_call",
-            "content": "self.attackermaps\\mp\\zombies\\_zm_challenges::increment_stat",
+            "content": "self.attacker maps\\mp\\zombies\\_zm_challenges::increment_stat",
             "arguments": [
               {
                 "type": "string",
@@ -22799,12 +22800,12 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "zombie_init_done",
+    "arguments": [],
     "children": [
       {
         "type": "variable_assignment",
@@ -22818,15 +22819,20 @@
       },
       {
         "type": "function_call",
-        "content": "selfthreadmaps\\mp\\zm_tomb_distance_tracking::escaped_zombies_cleanup_init",
+        "content": "self thread maps\\mp\\zm_tomb_distance_tracking::escaped_zombies_cleanup_init",
         "arguments": []
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_validate_enemy_path_length",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "player"
+      }
+    ],
     "children": [
       {
         "type": "variable_assignment",
@@ -22878,27 +22884,22 @@
       },
       {
         "type": "variable_reference",
-        "content": "returntrue"
+        "content": "return true"
       },
       {
         "type": "variable_reference",
-        "content": "returnfalse"
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "player"
+        "content": "return false"
       }
     ]
   },
   {
     "type": "function_declaration",
     "content": "show_zombie_count",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -22990,7 +22991,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "wait5"
+            "content": "wait 5"
           },
           {
             "type": "unhandled_token",
@@ -23003,12 +23004,21 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_custom_divetonuke_explode",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "attacker"
+      },
+      {
+        "type": "variable_reference",
+        "content": "origin"
+      }
+    ],
     "children": [
       {
         "type": "variable_assignment",
@@ -23096,13 +23106,13 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&level.flopper_network_optimized"
+            "content": "&& level.flopper_network_optimized"
           }
         ]
       },
       {
         "type": "function_call",
-        "content": "attackerthreadtomb_custom_divetonuke_explode_network_optimized",
+        "content": "attacker thread tomb_custom_divetonuke_explode_network_optimized",
         "arguments": [
           {
             "type": "variable_reference",
@@ -23188,7 +23198,7 @@
       },
       {
         "type": "function_call",
-        "content": "attackerplaysound",
+        "content": "attacker playsound",
         "arguments": [
           {
             "type": "string",
@@ -23216,7 +23226,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "wait1"
+        "content": "wait 1"
       },
       {
         "type": "function_call",
@@ -23236,25 +23246,37 @@
           }
         ]
       }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "attacker"
-      },
-      {
-        "type": "variable_reference",
-        "content": "origin"
-      }
     ]
   },
   {
     "type": "function_declaration",
     "content": "tomb_custom_divetonuke_explode_network_optimized",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "origin"
+      },
+      {
+        "type": "variable_reference",
+        "content": "radius"
+      },
+      {
+        "type": "variable_reference",
+        "content": "max_damage"
+      },
+      {
+        "type": "variable_reference",
+        "content": "min_damage"
+      },
+      {
+        "type": "variable_reference",
+        "content": "damage_mod"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -23555,7 +23577,7 @@
           },
           {
             "type": "function_call",
-            "content": "e_zombiedodamage",
+            "content": "e_zombie dodamage",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -23661,28 +23683,6 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "origin"
-      },
-      {
-        "type": "variable_reference",
-        "content": "radius"
-      },
-      {
-        "type": "variable_reference",
-        "content": "max_damage"
-      },
-      {
-        "type": "variable_reference",
-        "content": "min_damage"
-      },
-      {
-        "type": "variable_reference",
-        "content": "damage_mod"
-      }
     ]
   },
   {
@@ -23696,6 +23696,7 @@
   {
     "type": "function_declaration",
     "content": "tomb_custom_electric_cherry_laststand",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
@@ -23766,7 +23767,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfplaysound",
+            "content": "self playsound",
             "arguments": [
               {
                 "type": "string",
@@ -23780,7 +23781,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfnotify",
+            "content": "self notify",
             "arguments": [
               {
                 "type": "string",
@@ -23794,7 +23795,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "wait0.05"
+            "content": "wait 0.05"
           },
           {
             "type": "unhandled_token",
@@ -23980,7 +23981,7 @@
           },
           {
             "type": "function_call",
-            "content": "threadmaps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_death_fx",
+            "content": "thread maps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_death_fx",
             "arguments": []
           },
           {
@@ -24025,7 +24026,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfmaps\\mp\\zombies\\_zm_score::add_to_player_score",
+            "content": "self maps\\mp\\zombies\\_zm_score::add_to_player_score",
             "arguments": [
               {
                 "type": "number",
@@ -24069,7 +24070,7 @@
           },
           {
             "type": "function_call",
-            "content": "threadmaps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_stun",
+            "content": "thread maps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_stun",
             "arguments": []
           },
           {
@@ -24094,7 +24095,7 @@
           },
           {
             "type": "function_call",
-            "content": "threadmaps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_shock_fx",
+            "content": "thread maps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_shock_fx",
             "arguments": []
           },
           {
@@ -24110,7 +24111,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "wait0.1"
+        "content": "wait 0.1"
       },
       {
         "type": "variable_reference",
@@ -24154,8 +24155,7 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "unhandled_token",
@@ -24163,7 +24163,7 @@
   },
   {
     "type": "function_call",
-    "content": "selfnotify",
+    "content": "self notify",
     "arguments": [
       {
         "type": "string",
@@ -24182,10 +24182,11 @@
   {
     "type": "function_declaration",
     "content": "tomb_custom_electric_cherry_reload_attack",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -24195,7 +24196,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -24205,7 +24206,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -24252,7 +24253,7 @@
         "children": [
           {
             "type": "function_call",
-            "content": "selfwaittill",
+            "content": "self waittill",
             "arguments": [
               {
                 "type": "string",
@@ -24270,7 +24271,7 @@
             "children": [
               {
                 "type": "function_call",
-                "content": "selfgetcurrentweapon",
+                "content": "self getcurrentweapon",
                 "arguments": []
               }
             ]
@@ -24329,7 +24330,7 @@
           },
           {
             "type": "variable_assignment",
-            "content": "undefined",
+            "content": "",
             "children": [
               {
                 "type": "variable_reference",
@@ -24359,7 +24360,7 @@
             "children": [
               {
                 "type": "function_call",
-                "content": "selfgetweaponammoclip",
+                "content": "self getweaponammoclip",
                 "arguments": [
                   {
                     "type": "variable_reference",
@@ -24469,7 +24470,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfthreadmaps\\mp\\zombies\\_zm_perk_electric_cherry::check_for_reload_complete",
+            "content": "self thread maps\\mp\\zombies\\_zm_perk_electric_cherry::check_for_reload_complete",
             "arguments": [
               {
                 "type": "variable_reference",
@@ -24521,11 +24522,11 @@
           },
           {
             "type": "variable_reference",
-            "content": "case0:"
+            "content": "case 0:"
           },
           {
             "type": "variable_reference",
-            "content": "case1:"
+            "content": "case 1:"
           },
           {
             "type": "variable_assignment",
@@ -24547,7 +24548,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "case2:"
+            "content": "case 2:"
           },
           {
             "type": "variable_assignment",
@@ -24569,7 +24570,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "case3:"
+            "content": "case 3:"
           },
           {
             "type": "variable_assignment",
@@ -24591,7 +24592,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "case4:"
+            "content": "case 4:"
           },
           {
             "type": "variable_assignment",
@@ -24634,7 +24635,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfthreadmaps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_cooldown_timer",
+        "content": "self thread maps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_cooldown_timer",
         "arguments": [
           {
             "type": "variable_reference",
@@ -24662,7 +24663,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "&&n_zombie_limit"
+            "content": "&& n_zombie_limit"
           }
         ]
       },
@@ -24672,7 +24673,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfthreadelectric_cherry_reload_fx",
+        "content": "self thread electric_cherry_reload_fx",
         "arguments": [
           {
             "type": "variable_reference",
@@ -24682,7 +24683,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfnotify",
+        "content": "self notify",
         "arguments": [
           {
             "type": "string",
@@ -24692,7 +24693,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfplaysound",
+        "content": "self playsound",
         "arguments": [
           {
             "type": "string",
@@ -24829,7 +24830,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "&&isalive"
+                "content": "&& isalive"
               },
               {
                 "type": "scope",
@@ -24991,7 +24992,7 @@
           },
           {
             "type": "function_call",
-            "content": "threadmaps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_death_fx",
+            "content": "thread maps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_death_fx",
             "arguments": []
           },
           {
@@ -25036,7 +25037,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfmaps\\mp\\zombies\\_zm_score::add_to_player_score",
+            "content": "self maps\\mp\\zombies\\_zm_score::add_to_player_score",
             "arguments": [
               {
                 "type": "number",
@@ -25120,7 +25121,7 @@
           },
           {
             "type": "function_call",
-            "content": "threadmaps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_stun",
+            "content": "thread maps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_stun",
             "arguments": []
           },
           {
@@ -25145,7 +25146,7 @@
           },
           {
             "type": "function_call",
-            "content": "threadmaps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_shock_fx",
+            "content": "thread maps\\mp\\zombies\\_zm_perk_electric_cherry::electric_cherry_shock_fx",
             "arguments": []
           },
           {
@@ -25161,7 +25162,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "wait0.1"
+        "content": "wait 0.1"
       },
       {
         "type": "function_call",
@@ -25237,8 +25238,7 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "unhandled_token",
@@ -25246,7 +25246,7 @@
   },
   {
     "type": "function_call",
-    "content": "selfnotify",
+    "content": "self notify",
     "arguments": [
       {
         "type": "string",
@@ -25269,10 +25269,11 @@
   {
     "type": "function_declaration",
     "content": "tomb_custom_player_track_ammo_count",
+    "arguments": [],
     "children": [
       {
         "type": "function_call",
-        "content": "selfnotify",
+        "content": "self notify",
         "arguments": [
           {
             "type": "string",
@@ -25282,7 +25283,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -25292,7 +25293,7 @@
       },
       {
         "type": "function_call",
-        "content": "selfendon",
+        "content": "self endon",
         "arguments": [
           {
             "type": "string",
@@ -25335,7 +25336,7 @@
         "children": [
           {
             "type": "variable_reference",
-            "content": "wait0.5"
+            "content": "wait 0.5"
           },
           {
             "type": "unhandled_token",
@@ -25347,7 +25348,7 @@
             "children": [
               {
                 "type": "function_call",
-                "content": "selfgetcurrentweapon",
+                "content": "self getcurrentweapon",
                 "arguments": []
               }
             ]
@@ -25376,7 +25377,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "||weap"
+                "content": "|| weap"
               }
             ]
           },
@@ -25394,7 +25395,7 @@
             "arguments": [
               {
                 "type": "variable_reference",
-                "content": "selfgetammocount"
+                "content": "self getammocount"
               },
               {
                 "type": "scope",
@@ -25412,7 +25413,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "5||selfmaps\\mp\\zombies\\_zm_laststand::player_is_in_laststand"
+                "content": "5 || self maps\\mp\\zombies\\_zm_laststand::player_is_in_laststand"
               },
               {
                 "type": "scope",
@@ -25466,7 +25467,7 @@
         "arguments": [
           {
             "type": "variable_reference",
-            "content": "selfgetammocount"
+            "content": "self getammocount"
           },
           {
             "type": "scope",
@@ -25515,7 +25516,7 @@
           },
           {
             "type": "function_call",
-            "content": "selfmaps\\mp\\zombies\\_zm_audio::create_and_play_dialog",
+            "content": "self maps\\mp\\zombies\\_zm_audio::create_and_play_dialog",
             "arguments": [
               {
                 "type": "string",
@@ -25554,12 +25555,11 @@
         ],
         "content": "{}"
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_call",
-    "content": "elseif",
+    "content": "else if",
     "arguments": [
       {
         "type": "variable_reference",
@@ -25577,7 +25577,7 @@
   },
   {
     "type": "function_call",
-    "content": "selfmaps\\mp\\zombies\\_zm_audio::create_and_play_dialog",
+    "content": "self maps\\mp\\zombies\\_zm_audio::create_and_play_dialog",
     "arguments": [
       {
         "type": "string",
@@ -25607,7 +25607,7 @@
   },
   {
     "type": "variable_reference",
-    "content": "wait20"
+    "content": "wait 20"
   },
   {
     "type": "unhandled_token",
@@ -25620,6 +25620,12 @@
   {
     "type": "function_declaration",
     "content": "tomb_can_track_ammo_custom",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "weap"
+      }
+    ],
     "children": [
       {
         "type": "function_call",
@@ -25647,7 +25653,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "returnfalse"
+        "content": "return false"
       },
       {
         "type": "function_call",
@@ -26072,7 +26078,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "returnfalse"
+            "content": "return false"
           },
           {
             "type": "unhandled_token",
@@ -26102,7 +26108,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "||is_placeable_mine"
+                "content": "|| is_placeable_mine"
               },
               {
                 "type": "scope",
@@ -26116,7 +26122,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "||is_equipment"
+                "content": "|| is_equipment"
               },
               {
                 "type": "scope",
@@ -26130,7 +26136,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "||issubstr"
+                "content": "|| issubstr"
               },
               {
                 "type": "scope",
@@ -26152,7 +26158,7 @@
               },
               {
                 "type": "variable_reference",
-                "content": "||getsubstr"
+                "content": "|| getsubstr"
               },
               {
                 "type": "scope",
@@ -26184,7 +26190,7 @@
           },
           {
             "type": "variable_reference",
-            "content": "returnfalse"
+            "content": "return false"
           },
           {
             "type": "unhandled_token",
@@ -26199,13 +26205,7 @@
       },
       {
         "type": "variable_reference",
-        "content": "returntrue"
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "weap"
+        "content": "return true"
       }
     ]
   }

@@ -1,10 +1,5 @@
 {
-  "include_paths": [
-    "common_scripts\\utility",
-    "maps\\mp\\gametypes_zm\\_hud_util",
-    "maps\\mp\\zombies\\_zm_utility",
-    "some_script"
-  ],
+  "include_paths": [],
   "function_declarations": [
     {
       "name": "init",
@@ -75,6 +70,20 @@
           "name": "print",
           "arguments": [
             "welcome_message"
+          ]
+        },
+        {
+          "name": "level thread some_function",
+          "arguments": [
+            "some_arg1",
+            "some_arg2",
+            "some_arg3"
+          ]
+        },
+        {
+          "name": "player thread some_func",
+          "arguments": [
+            "arg1"
           ]
         }
       ]

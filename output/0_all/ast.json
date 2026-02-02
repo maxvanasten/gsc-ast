@@ -1,27 +1,8 @@
 [
   {
-    "type": "comment",
-    "content": "Include external scripts"
-  },
-  {
-    "type": "include_statement",
-    "file_path": "common_scripts\\utility"
-  },
-  {
-    "type": "include_statement",
-    "file_path": "maps\\mp\\gametypes_zm\\_hud_util"
-  },
-  {
-    "type": "include_statement",
-    "file_path": "maps\\mp\\zombies\\_zm_utility"
-  },
-  {
-    "type": "include_statement",
-    "file_path": "some_script"
-  },
-  {
     "type": "function_declaration",
     "content": "init",
+    "arguments": [],
     "children": [
       {
         "type": "comment",
@@ -115,12 +96,21 @@
           }
         ]
       }
-    ],
-    "arguments": []
+    ]
   },
   {
     "type": "function_declaration",
     "content": "greet_player",
+    "arguments": [
+      {
+        "type": "variable_reference",
+        "content": "player_name"
+      },
+      {
+        "type": "variable_reference",
+        "content": "player_age"
+      }
+    ],
     "children": [
       {
         "type": "variable_assignment",
@@ -173,16 +163,34 @@
             "content": "welcome_message"
           }
         ]
-      }
-    ],
-    "arguments": [
-      {
-        "type": "variable_reference",
-        "content": "player_name"
       },
       {
-        "type": "variable_reference",
-        "content": "player_age"
+        "type": "function_call",
+        "content": "level thread some_function",
+        "arguments": [
+          {
+            "type": "variable_reference",
+            "content": "some_arg1"
+          },
+          {
+            "type": "variable_reference",
+            "content": "some_arg2"
+          },
+          {
+            "type": "variable_reference",
+            "content": "some_arg3"
+          }
+        ]
+      },
+      {
+        "type": "function_call",
+        "content": "player thread some_func",
+        "arguments": [
+          {
+            "type": "variable_reference",
+            "content": "arg1"
+          }
+        ]
       }
     ]
   }
