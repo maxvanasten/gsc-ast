@@ -1,4 +1,4 @@
-import { ASTItem } from "./parse_tokens";
+import { ASTItem } from "./parse_tokens.ts";
 
 export default function sanitize_ast(ast: ASTItem[]): ASTItem[] {
     for (let i = ast.length-1; i >= 0; i--) {

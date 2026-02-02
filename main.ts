@@ -1,33 +1,33 @@
-import fs from "fs";
-import Tokenizer from "./tokenizer";
+#!/usr/bin/env -S deno --allow-read --allow-write
+import Tokenizer from "./modules/tokenizer.ts";
 
-import parse_tokens from "./helpers/parse_tokens";
+import parse_tokens, { ASTItem } from "./modules/parse_tokens.ts";
 
-import analyze_ast from "./helpers/analyze_ast";
-import sanitize_ast from "./helpers/sanitize_ast";
+import analyze_ast from "./modules/analyze_ast.ts";
+import sanitize_ast from "./modules/sanitize_ast.ts";
 
-const input_files = fs.readdirSync(`./input`);
+const input_files = Deno.readDirSync(`./input`);
 
-if (!fs.existsSync("./output")) fs.mkdirSync("./output");
+if (!Deno.openSync("./output")) Deno.mkdirSync("./output");
 
-console.log(`[gsc-ast] Attempting to parse input files...`);
+//console.log(`[gsc-ast] Attempting to parse input files...`);
 input_files.forEach((input_file) => {
-    const name = input_file.split(".gsc")[0];
-    const input_path = `./input/${input_file}`;
+    const name = input_file.name.split(".gsc")[0];
+    const input_path = `./input/${input_file.name}`;
     const output_path = `./output/${name}`;
 
-    if (!fs.existsSync(output_path)) {
-        fs.mkdirSync(output_path);
+    if (!Deno.openSync(output_path)) {
+        Deno.mkdirSync(output_path);
     } else {
-        fs.rmSync(output_path, { recursive: true, force: true });
-        fs.mkdirSync(output_path);
+        Deno.removeSync(output_path, { recursive: true });
+        Deno.mkdirSync(output_path);
     }
 
-    const content = fs.readFileSync(input_path, { encoding: "utf8" });
+    const content = Deno.readFileSync(input_path);
 
-    console.log(`=========================================================\n\t${name}[Tokenizer]`)
+    //console.log(`=========================================================\n\t${name}[Tokenizer]`)
     // Tokenize content
-    const tokenizer = new Tokenizer(content);
+    const tokenizer = new Tokenizer(new TextDecoder().decode(content));
     const tokens = tokenizer.tokenize();
 
     let tokens_log_string = "";
@@ -38,12 +38,12 @@ input_files.forEach((input_file) => {
             tokens_log_string += `${token.identifier}\n\t\t\t`
         }
     })
-    console.log(`\t\tTokens: \n\t\t\t${tokens_log_string}`);
+    //console.log(`\t\tTokens: \n\t\t\t${tokens_log_string}`);
 
-    console.log(`\t\tWriting tokens to ${output_path}/tokens.json`);
-    fs.writeFileSync(`${output_path}/tokens.json`, JSON.stringify(tokens, null, 2));
+    //console.log(`\t\tWriting tokens to ${output_path}/tokens.json`);
+    Deno.writeFileSync(`${output_path}/tokens.json`, new TextEncoder().encode(JSON.stringify(tokens, null, 2)));
 
-    console.log(`\n\n\n\n\n\t${name}[Parser]`)
+    //console.log(`\n\n\n\n\n\t${name}[Parser]`)
     // Parse tokens
     const ast = sanitize_ast(parse_tokens(tokens));
     ast.forEach((item) => {
@@ -70,7 +70,7 @@ input_files.forEach((input_file) => {
                 if (!item.arguments) break;
                 ast_log_string += `${item.type} (variable_name: ${item.content})\n`;
                 // Get rest of children
-                item.arguments.forEach((child) => {
+                item.arguments.forEach((child: ASTItem) => {
                     ast_log_string += `\t\t\t\t${child.type}: ${child.content}\n`;
                 })
                 ast_log_string += `\n\t\t\t`;
@@ -80,10 +80,10 @@ input_files.forEach((input_file) => {
         }
 
     })
-    console.log(`\t\tASTItems: \n\t\t\t${ast_log_string}`);
+    //console.log(`\t\tASTItems: \n\t\t\t${ast_log_string}`);
 
-    console.log(`\t\tWriting AST to ${output_path}/ast.json`);
-    fs.writeFileSync(`${output_path}/ast.json`, JSON.stringify(ast, null, 2));
+    //console.log(`\t\tWriting AST to ${output_path}/ast.json`);
+    Deno.writeFileSync(`${output_path}/ast.json`, new TextEncoder().encode(JSON.stringify(ast, null, 2)));
 
     const analysis = analyze_ast(ast);
 
@@ -92,7 +92,7 @@ input_files.forEach((input_file) => {
         level_variables_str += `- ${l_var}\n`;
     })
 
-    fs.writeFileSync(`${output_path}/level_variables.md`, level_variables_str);
+    Deno.writeFileSync(`${output_path}/level_variables.md`, new TextEncoder().encode(level_variables_str));
 
-    fs.writeFileSync(`${output_path}/output.json`, JSON.stringify(analysis, null, 2));
+    Deno.writeFileSync(`${output_path}/output.json`, new TextEncoder().encode(JSON.stringify(analysis, null, 2)));
 })

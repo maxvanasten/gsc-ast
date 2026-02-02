@@ -1,4 +1,4 @@
-import { ASTItem } from "./parse_tokens";
+import { ASTItem } from "./parse_tokens.ts";
 
 type function_declaration = {
     name: string;

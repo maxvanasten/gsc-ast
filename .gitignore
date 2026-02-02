@@ -2,3 +2,5 @@ node_modules/
 releases/
 input/target.gsc
 output/target/
+deno.json
+deno.json

@@ -1,6 +1,6 @@
-import { Token } from "../tokenizer";
-import get_matching_tokens from "./get_matching_tokens";
-import get_until_token from "./get_until_token";
+import { Token } from "./tokenizer.ts";
+import get_matching_tokens from "./get_matching_tokens.ts";
+import get_until_token from "./get_until_token.ts";
 
 export type ASTItem = {
 	type: string;

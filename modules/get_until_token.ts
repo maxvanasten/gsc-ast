@@ -1,5 +1,5 @@
-import { Token } from "../tokenizer";
-import { MatchResult } from "./get_matching_tokens";
+import { Token } from "./tokenizer.ts";
+import { MatchResult } from "./get_matching_tokens.ts";
 
 export default function get_until_token(input_tokens: Token[], target_token_identifier: string, index: number, scope_token: string = "") {
     let result: MatchResult = {

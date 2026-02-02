@@ -1,4 +1,4 @@
-import { Token } from "../tokenizer";
+import { Token } from "./tokenizer.ts";
 
 export type MatchResult = {
     valid: boolean;
